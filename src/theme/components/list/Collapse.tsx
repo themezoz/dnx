@@ -4,7 +4,7 @@ import { Components } from '@mui/material/styles/components';
 const Collapse: Components<Omit<Theme, 'components'>>['MuiCollapse'] = {
   styleOverrides: {
     root: ({ theme }) => ({
-      padding: theme.spacing(0, 1),
+      padding: theme.spacing(0, 2),
 
       '& .MuiList-root': {
         padding: 0,
