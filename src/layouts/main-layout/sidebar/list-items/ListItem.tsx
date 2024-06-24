@@ -9,8 +9,6 @@ import IconifyIcon from 'components/base/IconifyIcon';
 const ListItem = ({ subheader, icon, path, active }: MenuItem) => {
   const [open, setOpen] = useState(false);
 
-  const isActivePath = active && path === '/';
-
   const handleClick = () => {
     setOpen(!open);
   };
@@ -20,7 +18,7 @@ const ListItem = ({ subheader, icon, path, active }: MenuItem) => {
       component={Link}
       href={path}
       onClick={handleClick}
-      sx={{ mb: 3, bgcolor: isActivePath ? 'neutral.light' : null }}
+      sx={{ mb: 2.5, bgcolor: active ? 'info.dark' : null }}
     >
       <ListItemIcon>
         {icon && (
@@ -28,7 +26,7 @@ const ListItem = ({ subheader, icon, path, active }: MenuItem) => {
             icon={icon}
             fontSize="h4.fontSize"
             sx={{
-              color: isActivePath ? 'text.primary' : null,
+              color: active ? 'text.primary' : null,
             }}
           />
         )}
@@ -37,10 +35,7 @@ const ListItem = ({ subheader, icon, path, active }: MenuItem) => {
         primary={subheader}
         sx={{
           '& .MuiListItemText-primary': {
-            ml: 0.75,
-            color: isActivePath ? 'text.primary' : null,
-            fontWeight: isActivePath ? 600 : 500,
-            fontSize: 'body2.fontSize',
+            color: active ? 'text.primary' : null,
           },
         }}
       />
