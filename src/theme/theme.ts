@@ -17,6 +17,11 @@ import ListItemButton from './components/list/ListItemButton';
 import ListItemText from './components/list/ListItemText';
 import MenuItem from './components/list/MenuItem';
 import ListItemIcon from './components/list/ListItemIcon';
+import InputBase from './components/input/InputBase';
+import FilledInput from './components/input/FilledInput';
+import OutlinedInput from './components/input/OutlinedInput';
+import InputAdornment from './components/input/InputAdornment';
+import Badge from './components/data-display/Badge';
 
 export const theme = createTheme({
   typography,
@@ -37,6 +42,11 @@ export const theme = createTheme({
     MuiListItemText: ListItemText,
     MuiListItemIcon: ListItemIcon,
     MuiMenuItem: MenuItem,
+    MuiInputBase: InputBase,
+    MuiFilledInput: FilledInput,
+    MuiOutlinedInput: OutlinedInput,
+    MuiInputAdornment: InputAdornment,
+    MuiBadge: Badge,
     MuiCssBaseline: CssBaseline,
   },
 });
