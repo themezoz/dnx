@@ -10,7 +10,7 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       color: theme.palette.text.primary,
       borderRadius: theme.shape.borderRadius * 2.5,
       textTransform: 'initial',
-      fontWeight: 600,
+      fontWeight: 700,
     }),
     contained: ({ theme }) => ({
       '&.Mui-disabled': {
@@ -29,16 +29,16 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
         color: theme.palette.text.disabled,
       },
     }),
-    // containedPrimary: ({ theme }) => ({
-    //   background: `linear-gradient(128.49deg, ${theme.palette.gradients.primary.main} 19.86%, ${theme.palette.gradients.primary.state} 68.34%)`,
-    //   '&:hover': {
-    //     background: `linear-gradient(128.49deg, ${theme.palette.gradients.primary.main} 19.86%, ${theme.palette.gradients.primary.state} 68.34%)`,
-    //   },
-    // }),
+    containedPrimary: ({ theme }) => ({
+      background: theme.palette.primary.main,
+      '&:hover': {
+        background: theme.palette.primary.main,
+      },
+    }),
     containedSecondary: ({ theme }) => ({
       color: theme.palette.text.primary,
-      background: theme.palette.neutral.lighter,
-      '&:hover': { background: theme.palette.neutral.lighter },
+      background: theme.palette.info.light,
+      '&:hover': { background: theme.palette.info.light },
     }),
     sizeLarge: ({ theme }) => ({
       padding: theme.spacing(1.25, 2.25),

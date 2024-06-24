@@ -43,7 +43,7 @@ const DrawerItems = () => {
       <Stack position="relative" mt={10} mb={4} height={330} width={1} sx={{ userSelect: 'none' }}>
         <Image src={FooterImg} height={1} width={1} sx={{ objectFit: 'cover' }} />
 
-        <Stack px={1.75} direction="column" position="absolute" top={120} left={0} width={1}>
+        <Stack px={1.75} direction="column" position="absolute" top={110} left={0} width={1}>
           <Typography variant="body1" fontWeight="600" color="info.light" align="center" width={1}>
             Help Center
           </Typography>
