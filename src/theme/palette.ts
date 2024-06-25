@@ -25,6 +25,7 @@ const palette: PaletteOptions = {
     lighter: gray[300],
     light: gray[400],
     main: gray[500],
+    darker: gray[900],
   },
   primary: {
     main: blue[500],
@@ -37,6 +38,7 @@ const palette: PaletteOptions = {
     light: white[100],
     main: white[200],
     dark: white[300],
+    darker: white[400],
   },
   success: {
     main: green[500],
