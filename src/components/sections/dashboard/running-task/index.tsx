@@ -13,7 +13,7 @@ const chartData = [
 
 const RunningTask = () => {
   return (
-    <Paper sx={{ bgcolor: 'primary.dark' }}>
+    <Paper sx={{ height: 230, bgcolor: 'primary.dark' }}>
       <Typography variant="subtitle1" fontWeight={600} color="info.light">
         Running Task
       </Typography>

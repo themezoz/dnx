@@ -5,6 +5,9 @@ const MenuItem: Components<Omit<Theme, 'components'>>['MuiMenuItem'] = {
   styleOverrides: {
     root: ({ theme }) => ({
       transition: 'all 0.3s ease-in-out',
+      fontSize: theme.typography.body2.fontSize,
+      borderRadius: theme.shape.borderRadius * 1.5,
+      fontWeight: 500,
       '&:hover': {
         backgroundColor: theme.palette.info.dark,
       },

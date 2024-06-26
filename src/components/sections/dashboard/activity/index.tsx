@@ -1,45 +1,49 @@
 import { Box, Stack, Paper, Typography } from '@mui/material';
 import { useState } from 'react';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import ActivityChart from './ActivityChart';
+import IconifyIcon from 'components/base/IconifyIcon';
 
 const Activity = () => {
-    const [age, setAge] = useState('');
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value);
-  };
+  const [week, setWeek] = useState('this-week');
+  const [open, setOpen] = useState(false);
 
   return (
-    <Paper sx={{ bgcolor: 'info.dark' }}>
-      <Stack alignItems="center" justifyContent="space-between">
+    <Paper sx={{ height: 230, bgcolor: 'info.dark' }}>
+      <Stack alignItems="center" justifyContent="space-between" mt={-0.5}>
         <Typography variant="body1" color={'text.primary'} fontWeight={700}>
           Activity
         </Typography>
 
-        <FormControl variant="filled" sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="demo-simple-select-filled-label">Age</InputLabel>
+        <FormControl variant="filled" sx={{ width: 110 }}>
           <Select
-            labelId="demo-simple-select-filled-label"
-            id="demo-simple-select-filled"
-            value={age}
-            onChange={handleChange}
+            id="select-filled"
+            value={week}
+            onOpen={() => setOpen(true)}
+            onClose={() => setOpen(false)}
+            onChange={(event: SelectChangeEvent) => {
+              setWeek(event.target.value);
+            }}
+            IconComponent={() => (
+              <IconifyIcon
+                icon="iconamoon:arrow-down-2-duotone"
+                sx={{
+                  transform: open ? 'rotate(180deg)' : 'rotate(0deg)',
+                }}
+              />
+            )}
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value="this-week">This Week</MenuItem>
+            <MenuItem value="last-week">Last Week</MenuItem>
+            <MenuItem value="two-weeks-ago">Two Weeks Ago</MenuItem>
           </Select>
         </FormControl>
       </Stack>
 
-      <Box height={130} bgcolor="info.light" borderRadius={3}>
-        <ActivityChart sx={{height: '100% !important'}}/>
+      <Box mt={2} height={140} bgcolor="info.light" borderRadius={3}>
+        <ActivityChart sx={{ height: '100% !important' }} />
       </Box>
     </Paper>
   );

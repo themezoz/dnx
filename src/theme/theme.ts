@@ -22,6 +22,7 @@ import FilledInput from './components/input/FilledInput';
 import OutlinedInput from './components/input/OutlinedInput';
 import InputAdornment from './components/input/InputAdornment';
 import Badge from './components/data-display/Badge';
+import Select from './components/input/Select';
 
 export const theme = createTheme({
   typography,
@@ -46,6 +47,7 @@ export const theme = createTheme({
     MuiFilledInput: FilledInput,
     MuiOutlinedInput: OutlinedInput,
     MuiInputAdornment: InputAdornment,
+    MuiSelect: Select,
     MuiBadge: Badge,
     MuiCssBaseline: CssBaseline,
   },

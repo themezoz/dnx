@@ -11,6 +11,7 @@ const Paper: Components<Omit<Theme, 'components'>>['MuiPaper'] = {
 
       '&.MuiMenu-paper': {
         padding: theme.spacing(1),
+        boxShadow: theme.customShadows[0]
       },
     }),
   },

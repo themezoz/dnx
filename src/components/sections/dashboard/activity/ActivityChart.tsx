@@ -15,7 +15,7 @@ const ActivityChart = ({ ...rest }: ActivityChartProps) => {
     () => ({
       grid: {
         top: 24,
-        bottom: 32,
+        bottom: 36,
         left: 44,
         right: 24,
         containerLabel: true,
