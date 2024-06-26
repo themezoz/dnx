@@ -1,13 +1,32 @@
 import { useMemo } from 'react';
 import { SxProps, useTheme } from '@mui/material';
-import * as echarts from 'echarts';
+import * as echarts from 'echarts/core';
 import ReactEchart from 'components/base/ReactEchart';
+import { CanvasRenderer } from 'echarts/renderers';
+import { LineChart } from 'echarts/charts';
+import { EChartOption } from 'echarts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+} from 'echarts/components';
+
+echarts.use([
+  LineChart,
+  TitleComponent,
+  TooltipComponent,
+  GridComponent,
+  LegendComponent,
+  CanvasRenderer,
+]);
 
 interface ActivityChartProps {
+  data?: number[];
   sx?: SxProps;
 }
 
-const ActivityChart = ({ ...rest }: ActivityChartProps) => {
+const ActivityChart = ({ data, ...rest }: ActivityChartProps) => {
   const theme = useTheme();
   let isTopOffset: boolean;
 
@@ -38,10 +57,10 @@ const ActivityChart = ({ ...rest }: ActivityChartProps) => {
           fontWeight: 500,
         },
         extraCssText: 'border: none; box-shadow: none',
-        confine: false,
+        confine: true,
         position: (
           point: [number, number],
-          _params: echarts.EChartOption.Tooltip.Format[],
+          _params: EChartOption.Tooltip.Format[],
           _dom: HTMLElement,
           _rect: unknown,
           size: { contentSize: [number, number]; viewSize: [number, number] },
@@ -59,9 +78,7 @@ const ActivityChart = ({ ...rest }: ActivityChartProps) => {
             return [x - size.contentSize[0] / 2, bottomOffset];
           }
         },
-        formatter: (
-          params: echarts.EChartOption.Tooltip.Format | echarts.EChartOption.Tooltip.Format[],
-        ) => {
+        formatter: (params: EChartOption.Tooltip.Format | EChartOption.Tooltip.Format[]) => {
           if (Array.isArray(params)) {
             const dataValue = Math.round(params[0].data);
             const arrowPosition = isTopOffset ? 'bottom:-12px;' : 'top:-12px;';
@@ -116,7 +133,7 @@ const ActivityChart = ({ ...rest }: ActivityChartProps) => {
       },
       series: [
         {
-          data: [1.3, 2, 1.4, 2.7, 1.8, 2.4, 1.9],
+          data: data,
           type: 'line',
           smooth: true,
           showSymbol: false,
@@ -129,6 +146,8 @@ const ActivityChart = ({ ...rest }: ActivityChartProps) => {
           },
           lineStyle: {
             width: 3,
+            type: 'solid',
+            cap: 'round',
             color: theme.palette.text.primary,
             shadowColor: theme.palette.info.darker,
             shadowOffsetX: -2,
@@ -137,7 +156,7 @@ const ActivityChart = ({ ...rest }: ActivityChartProps) => {
         },
       ],
     }),
-    [theme],
+    [theme, data],
   );
 
   return <ReactEchart echarts={echarts} option={option} {...rest} />;

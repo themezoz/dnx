@@ -1,7 +1,12 @@
-import { useMemo } from 'react';
-import { SxProps, useTheme } from '@mui/material';
-import * as echarts from 'echarts';
+import * as echarts from 'echarts/core';
+import { TooltipComponent } from 'echarts/components';
+import { GaugeChart } from 'echarts/charts';
+import { SVGRenderer } from 'echarts/renderers';
 import ReactEchart from 'components/base/ReactEchart';
+import { useTheme, SxProps } from '@mui/material';
+import { useMemo } from 'react';
+
+echarts.use([TooltipComponent, GaugeChart, SVGRenderer]);
 
 interface RunningTaskChartProps {
   data: {

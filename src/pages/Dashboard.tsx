@@ -7,7 +7,7 @@ const Dashboard = () => {
     <Grid container>
       <Grid container lg={8} sx={{ height: '200vh' }} p={3.5} spacing={3.5}>
         <Grid item lg={3}>
-          <RunningTask />
+        <RunningTask/>
         </Grid>
         <Grid item lg={9}>
           <Activity/>
