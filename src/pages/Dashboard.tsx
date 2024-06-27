@@ -8,16 +8,16 @@ const Dashboard = () => {
   return (
     <Stack>
       <Grid container flex={5} sx={{ height: '200vh' }} p={3.5} spacing={3.5}>
-        <Grid item lg={3}>
+        <Grid item lg={3.5}>
           <RunningTask />
         </Grid>
-        <Grid item lg={9}>
+        <Grid item lg={8.5}>
           <Activity />
         </Grid>
       </Grid>
 
-      <Box flex={3} height="100vh" overflow="scroll" bgcolor="info.main" position="sticky" top={0}>
-        <Grid container height="200vh">
+      <Box flex={3} height={`calc(100vh - 90px)`} overflow="scroll" bgcolor="info.main" position="sticky" top={90}>
+        <Grid container height={"200vh"}>
           <h1>Hello!</h1>
         </Grid>
       </Box>
