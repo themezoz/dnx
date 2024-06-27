@@ -6,8 +6,8 @@ const IconButton: Components<Omit<Theme, 'components'>>['MuiIconButton'] = {
     root: ({ theme }) => ({
       border: 1,
       borderStyle: 'solid',
-      borderColor: theme.palette.info.dark,
-      background: theme.palette.info.light,
+      borderColor: theme.palette.info.main,
+      background: theme.palette.info.lighter,
       color: theme.palette.text.disabled,
       marginLeft: 0,
     }),
