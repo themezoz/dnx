@@ -36,7 +36,7 @@ const Activity = () => {
   };
 
   return (
-    <Paper sx={{ height: 230, bgcolor: 'info.main' }}>
+    <Paper sx={{ height: 220, bgcolor: 'info.main' }}>
       <Stack alignItems="center" justifyContent="space-between" mt={-0.5}>
         <Typography variant="body1" color="text.primary" fontWeight={700}>
           Activity
@@ -65,7 +65,7 @@ const Activity = () => {
         </FormControl>
       </Stack>
 
-      <Box mt={2} height={140} bgcolor="info.lighter" borderRadius={3}>
+      <Box mt={2} height={130} bgcolor="info.lighter" borderRadius={3}>
         <ActivityChart data={data} sx={{ height: '100% !important' }} />
       </Box>
     </Paper>
