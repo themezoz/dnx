@@ -1,11 +1,13 @@
-import { Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 import Activity from 'components/sections/dashboard/activity';
 import RunningTask from 'components/sections/dashboard/running-task';
 
 const Dashboard = () => {
   return (
-    <Grid container>
-      <Grid container lg={8} sx={{ height: '200vh' }} p={3.5} spacing={3.5}>
+    <Stack>
+      <Grid container flex={5} sx={{ height: '200vh' }} p={3.5} spacing={3.5}>
         <Grid item lg={3}>
           <RunningTask />
         </Grid>
@@ -14,24 +16,12 @@ const Dashboard = () => {
         </Grid>
       </Grid>
 
-      <Grid
-        container
-        lg={4}
-        sx={{
-          height: 'calc(100vh - 200px)',
-          bgcolor: '#ddd',
-          overflow: 'scroll',
-          position: 'sticky',
-          top: 100,
-        }}
-      >
-        <Grid container sx={{ height: '200vh' }}>
-          <Grid item>
-            <h1>Box2!</h1>
-          </Grid>
+      <Box flex={3} height="100vh" overflow="scroll" bgcolor="info.main" position="sticky" top={0}>
+        <Grid container height="200vh">
+          <h1>Hello!</h1>
         </Grid>
-      </Grid>
-    </Grid>
+      </Box>
+    </Stack>
   );
 };
 
