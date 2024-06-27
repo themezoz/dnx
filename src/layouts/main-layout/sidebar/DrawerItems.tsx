@@ -20,7 +20,7 @@ const DrawerItems = () => {
         pt={4}
         pb={2.5}
         alignItems="center"
-        bgcolor="info.light"
+        bgcolor="info.lighter"
         zIndex={1000}
       >
         <ButtonBase component={Link} href="/" disableRipple>
@@ -52,13 +52,19 @@ const DrawerItems = () => {
         <Image src={FooterImg} height={1} width={1} sx={{ objectFit: 'cover' }} />
 
         <Stack px={1.75} direction="column" position="absolute" top={110} left={0} width={1}>
-          <Typography variant="body1" color="info.light" align="center" fontWeight={600} width={1}>
+          <Typography
+            variant="body1"
+            color="info.lighter"
+            align="center"
+            fontWeight={600}
+            width={1}
+          >
             Help Center
           </Typography>
           <Typography
             mt={1}
             variant="caption"
-            color="info.light"
+            color="info.lighter"
             align="center"
             fontWeight={400}
             width={1}
