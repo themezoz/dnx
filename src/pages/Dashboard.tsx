@@ -3,6 +3,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Activity from 'components/sections/dashboard/activity';
 import RunningTask from 'components/sections/dashboard/running-task';
+import TaskToday from 'components/sections/dashboard/task-today';
 
 const Dashboard = () => {
   return (
@@ -17,9 +18,9 @@ const Dashboard = () => {
       </Grid>
 
       <Box flex={3} height={`calc(100vh - 90px)`} overflow="scroll" bgcolor="info.main" position="sticky" top={90}>
-        <Grid container height={"200vh"}>
-          <h1>Hello!</h1>
-        </Grid>
+        <Stack height={"200vh"} spacing={3.5} p={3.5}>
+          <TaskToday/>
+        </Stack>
       </Box>
     </Stack>
   );

@@ -23,6 +23,13 @@ import OutlinedInput from './components/input/OutlinedInput';
 import InputAdornment from './components/input/InputAdornment';
 import Badge from './components/data-display/Badge';
 import Select from './components/input/Select';
+import Card from './components/card/Card';
+import CardHeader from './components/card/CardHeader';
+import CardMedia from './components/card/CardMedia';
+import CardContent from './components/card/CardContent';
+import Slider from './components/input/Slider';
+import AvatarGroup from './components/data-display/AvatarGroup';
+import Divider from './components/data-display/Divider';
 
 export const theme = createTheme({
   typography,
@@ -48,7 +55,14 @@ export const theme = createTheme({
     MuiOutlinedInput: OutlinedInput,
     MuiInputAdornment: InputAdornment,
     MuiSelect: Select,
+    MuiSlider: Slider,
     MuiBadge: Badge,
+    MuiCard: Card,
+    MuiCardMedia: CardMedia,
+    MuiCardHeader: CardHeader,
+    MuiCardContent: CardContent,
+    MuiAvatarGroup: AvatarGroup,
+    MuiDivider: Divider,
     MuiCssBaseline: CssBaseline,
   },
 });
