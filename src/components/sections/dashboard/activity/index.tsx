@@ -42,7 +42,7 @@ const Activity = () => {
           Activity
         </Typography>
 
-        <FormControl variant="filled" sx={{ width: 110 }}>
+        <FormControl variant="filled" sx={{ width: 100 }}>
           <Select
             id="select-filled"
             value={week}
