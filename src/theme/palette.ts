@@ -35,10 +35,10 @@ const palette: PaletteOptions = {
     main: blue[200],
   },
   info: {
-    light: white[100],
-    main: white[200],
-    dark: white[300],
-    darker: white[400],
+    lighter: white[100],
+    light: white[200],
+    main: white[300],
+    dark: white[400],
   },
   success: {
     main: green[500],

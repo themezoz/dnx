@@ -82,7 +82,7 @@ const ActivityChart = ({ data, ...rest }: ActivityChartProps) => {
           if (Array.isArray(params)) {
             const dataValue = Math.round(params[0].data);
             const arrowPosition = isTopOffset ? 'bottom:-12px;' : 'top:-12px;';
-            return `<div style="position:relative; margin:0; padding:0; color:#fff; border-radius:10px;">
+            return `<div style="position:relative; margin:0; padding:0; color:${theme.palette.info.lighter}; border-radius:10px;">
               ${dataValue} Tasks
               <span style="position:absolute; ${arrowPosition} left:50%; transform:translate(-50%) rotate(45deg); width:12px; height:12px; background:${theme.palette.primary.dark}; border-top:none; border-left:none; border-right:none; border-bottom:none; z-index:-10000;"></span>
             </div>`;
@@ -102,8 +102,8 @@ const ActivityChart = ({ data, ...rest }: ActivityChartProps) => {
         axisLabel: {
           margin: 10,
           color: theme.palette.text.primary,
-          fontFamily: theme.typography.fontFamily,
           fontSize: theme.typography.caption.fontSize,
+          fontFamily: theme.typography.fontFamily,
           fontWeight: 600,
         },
         splitLine: {
@@ -111,7 +111,7 @@ const ActivityChart = ({ data, ...rest }: ActivityChartProps) => {
           lineStyle: {
             type: 'solid',
             width: 1,
-            color: theme.palette.info.dark,
+            color: theme.palette.info.main,
           },
         },
         boundaryGap: 0,
@@ -149,7 +149,7 @@ const ActivityChart = ({ data, ...rest }: ActivityChartProps) => {
             type: 'solid',
             cap: 'round',
             color: theme.palette.text.primary,
-            shadowColor: theme.palette.info.darker,
+            shadowColor: theme.palette.info.dark,
             shadowOffsetX: -2,
             shadowOffsetY: 12,
           },

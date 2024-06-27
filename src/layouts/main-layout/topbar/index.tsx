@@ -32,9 +32,10 @@ const Topbar = ({ isClosing, mobileOpen, setMobileOpen }: TopbarProps) => {
       py={2.5}
       alignItems="center"
       justifyContent="space-between"
-      bgcolor="info.light"
+      bgcolor="info.lighter"
       position="sticky"
       top={0}
+      zIndex={1300}
     >
       <Stack spacing={2} alignItems="center">
         <Toolbar sx={{ display: { xm: 'block', lg: 'none' } }}>

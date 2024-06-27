@@ -4,16 +4,17 @@ import { Components } from '@mui/material/styles/components';
 const Select: Components<Omit<Theme, 'components'>>['MuiSelect'] = {
   styleOverrides: {
     root: ({ theme }) => ({
-      padding: theme.spacing(1),
-      paddingLeft: theme.spacing(1.25),
+      padding: 0,
       '&.MuiInputBase-root': {
         background: 'transparent !important',
       },
       '& .MuiBox-root': {
-        fontSize: theme.typography.h5.fontSize,
+        fontSize: theme.typography.h4.fontSize,
       },
     }),
     select: ({ theme }) => ({
+      padding: theme.spacing(1),
+      paddingLeft: theme.spacing(1.25),
       paddingRight: '0 !important',
       background: 'transparent !important',
       fontSize: theme.typography.caption.fontSize,

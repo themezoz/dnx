@@ -1,67 +1,50 @@
-import { Box, Stack, Paper, Typography } from '@mui/material';
 import { useState } from 'react';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Paper from '@mui/material/Paper';
 import MenuItem from '@mui/material/MenuItem';
+import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import ActivityChart from './ActivityChart';
 import IconifyIcon from 'components/base/IconifyIcon';
-import Button from '@mui/material/Button';
+import ActivityChart from './ActivityChart';
 
 const chartData = {
-  '2': [2.9, 2.5, 3, 1, 2, 1, 2],
-  '0': [1.7, 2, 1.4, 3, 1.8, 2.4, 1.9],
-  '1': [1.3, 2, 1, 3, 1, 2.6, 2.8],
+  thisWeek: [1.7, 2, 1.4, 3, 1.8, 2.4, 1.9],
+  lastWeek: [1.3, 2, 1, 3, 1, 2.6, 2.8],
+  twoWeeksAgo: [2.9, 2.5, 3, 1, 2, 1, 2],
 };
 
 const Activity = () => {
-  const [data, setData] = useState(chartData['0']);
+  const [data, setData] = useState(chartData.thisWeek);
   const [week, setWeek] = useState('this-week');
   const [open, setOpen] = useState(false);
 
-  const handleClick = (str: string) => {
-    let data: number[] = [];
-
-    if (str === 'week1') {
-      data = chartData['0'];
-      setData(data);
-    } else if (str === 'week2') {
-      data = chartData['1'];
-      setData(data);
-    } else if (str === 'week3') {
-      data = chartData['2'];
-      setData(data);
-    }
-  }
-
   const handleSelectChange = (event: SelectChangeEvent) => {
-    setWeek(event.target.value);
+    const week = event.target.value;
+    setWeek(week);
+
     setTimeout(() => {
-      if (event.target.value === 'this-week') {
-        handleClick('week1')
-      } else if (event.target.value === 'last-week') {
-        handleClick('week2')
+      if (week === 'this-week') {
+        setData(chartData.thisWeek);
+      } else if (week === 'last-week') {
+        setData(chartData.lastWeek);
       } else {
-        handleClick('week3')
+        setData(chartData.twoWeeksAgo);
       }
     }, 100);
   };
 
   return (
-    <Paper sx={{ height: 230, bgcolor: 'info.dark' }}>
+    <Paper sx={{ height: 230, bgcolor: 'info.main' }}>
       <Stack alignItems="center" justifyContent="space-between" mt={-0.5}>
-        <Typography variant="body1" color={'text.primary'} fontWeight={700}>
+        <Typography variant="body1" color="text.primary" fontWeight={700}>
           Activity
         </Typography>
 
-        <Stack>
-          <Button onClick={() => handleClick('week1')}>Week1</Button>
-          <Button onClick={() => handleClick('week2')}>Week2</Button>
-          <Button onClick={() => handleClick('week3')}>Week3</Button>
-        </Stack>
-
         <FormControl variant="filled" sx={{ width: 110 }}>
           <Select
-            // id="select-filled"
+            id="select-filled"
             value={week}
             onOpen={() => setOpen(true)}
             onClose={() => setOpen(false)}
@@ -82,7 +65,7 @@ const Activity = () => {
         </FormControl>
       </Stack>
 
-      <Box mt={2} height={140} bgcolor="info.light" borderRadius={3}>
+      <Box mt={2} height={140} bgcolor="info.lighter" borderRadius={3}>
         <ActivityChart data={data} sx={{ height: '100% !important' }} />
       </Box>
     </Paper>
