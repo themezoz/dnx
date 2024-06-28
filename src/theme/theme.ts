@@ -30,6 +30,7 @@ import CardContent from './components/card/CardContent';
 import Slider from './components/input/Slider';
 import AvatarGroup from './components/data-display/AvatarGroup';
 import Divider from './components/data-display/Divider';
+import CardActions from './components/card/CardActions';
 
 export const theme = createTheme({
   typography,
@@ -61,6 +62,7 @@ export const theme = createTheme({
     MuiCardMedia: CardMedia,
     MuiCardHeader: CardHeader,
     MuiCardContent: CardContent,
+    MuiCardActions: CardActions,
     MuiAvatarGroup: AvatarGroup,
     MuiDivider: Divider,
     MuiCssBaseline: CssBaseline,

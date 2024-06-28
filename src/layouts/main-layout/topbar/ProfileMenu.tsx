@@ -9,7 +9,7 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import IconifyIcon from 'components/base/IconifyIcon';
-import AvatarImage from 'assets/images/avater.png';
+import { Avatar3 } from 'data/images';
 
 interface MenuItems {
   id: number;
@@ -73,7 +73,7 @@ const ProfileMenu = () => {
             aria-haspopup="true"
           >
             <Avatar
-              src={AvatarImage}
+              src={Avatar3}
               sx={{
                 height: 48,
                 width: 48,
@@ -110,7 +110,7 @@ const ProfileMenu = () => {
       >
         <MenuItem onClick={handleProfileMenuClose} sx={{ '&:hover': { bgcolor: 'info.light' } }}>
           <Avatar
-            src={AvatarImage}
+            src={Avatar3}
             sx={{
               bgcolor: 'primary.main',
             }}

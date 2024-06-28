@@ -81,7 +81,7 @@ const DrawerItems = () => {
           px={1.75}
           justifyContent={'center'}
         >
-          <Button variant="contained" color="secondary" size="medium" fullWidth>
+          <Button variant="contained" color="secondary" size="small" fullWidth>
             Go To Help Center
           </Button>
         </Stack>

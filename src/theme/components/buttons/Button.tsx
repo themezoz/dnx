@@ -10,7 +10,6 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       color: theme.palette.text.primary,
       borderRadius: theme.shape.borderRadius * 2.5,
       textTransform: 'initial',
-      fontWeight: 700,
     }),
     contained: ({ theme }) => ({
       '&.Mui-disabled': {
@@ -30,6 +29,7 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       },
     }),
     containedPrimary: ({ theme }) => ({
+      color: theme.palette.info.lighter,
       background: theme.palette.primary.main,
       '&:hover': {
         background: theme.palette.primary.main,
@@ -43,14 +43,17 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
     sizeLarge: ({ theme }) => ({
       padding: theme.spacing(1.25, 2.25),
       fontSize: theme.typography.button.fontSize,
+      fontWeight: 600,
     }),
     sizeMedium: ({ theme }) => ({
-      padding: theme.spacing(1, 1.5),
-      fontSize: theme.typography.caption.fontSize,
+      padding: theme.spacing(1.125, 1.5),
+      fontSize: theme.typography.body2.fontSize,
+      fontWeight: 600,
     }),
     sizeSmall: ({ theme }) => ({
-      padding: theme.spacing(0.875, 1.15),
+      padding: theme.spacing(1, 1.15),
       fontSize: theme.typography.caption.fontSize,
+      fontWeight: 700,
     }),
   },
 };

@@ -11,8 +11,28 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
-import images from 'data/images';
-import { Divider } from '@mui/material';
+import { Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, CardImg1 } from 'data/images';
+import { Divider, Button } from '@mui/material';
+
+interface TaskDetail {
+  id: number;
+  details: string;
+}
+
+const taskDetails: TaskDetail[] = [
+  {
+    id: 1,
+    details: 'Understanding the tools in Figma',
+  },
+  {
+    id: 2,
+    details: 'Understand the basics of making designs',
+  },
+  {
+    id: 3,
+    details: 'Design a mobile application with figma',
+  },
+];
 
 const TaskToday = () => {
   return (
@@ -29,7 +49,7 @@ const TaskToday = () => {
         }
         title="Task Today"
       />
-      <CardMedia component="img" height="160" image={images.tastToday} alt="task_today_image" />
+      <CardMedia component="img" height="160" image={CardImg1} alt="task_today_image" />
       <CardContent>
         <Box mt={2}>
           <Typography variant="subtitle1" color="text.primary" fontWeight={600}>
@@ -67,22 +87,41 @@ const TaskToday = () => {
           </Stack>
 
           <AvatarGroup max={5}>
-            <Avatar alt="Remy Sharp" src={images.avatar} />
-            <Avatar alt="Travis Howard" src={images.avatar} />
-            <Avatar alt="Cindy Baker" src={images.avatar} />
-            <Avatar alt="Agnes Walker" src={images.avatar}/>
-            <Avatar alt="Trevor Henderson" src={images.avatar} />
+            <Avatar alt="Remy Sharp" src={Avatar1} />
+            <Avatar alt="Travis Howard" src={Avatar2} />
+            <Avatar alt="Cindy Baker" src={Avatar3} />
+            <Avatar alt="Agnes Walker" src={Avatar4} />
+            <Avatar alt="Trevor Henderson" src={Avatar5} />
           </AvatarGroup>
         </Stack>
 
-        <Divider/>
+        <Divider />
 
+        <Stack alignItems="center" justifyContent="space-between">
+          <Typography variant="subtitle1" color="primary.dark" fontWeight={700}>
+            Detail Task
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+            UI /UX Designer
+          </Typography>
+        </Stack>
 
+        <Stack direction="column" spacing={2} mt={2}>
+          {
+            taskDetails.map((task) => (
+              <Stack key={task.id} alignItems="center" spacing={1.5}>
+                <Stack alignItems="center" justifyContent="center" height={36} width={36} borderRadius={2.5} bgcolor="info.main">
+                  <Typography variant="body2" fontWeight={500}>{task.id}</Typography>
+                </Stack>
+                <Typography variant="body2" fontWeight={500}>{task.details}</Typography>
+              </Stack>
+            ))
+          }
+        </Stack>
       </CardContent>
 
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">{/* <FavoriteIcon /> */}</IconButton>
-        <IconButton aria-label="share">{/* <ShareIcon /> */}</IconButton>
+        <Button variant="contained" color="primary" size="medium" fullWidth>Go To Detail</Button>
       </CardActions>
     </Card>
   );
