@@ -87,4 +87,5 @@ export const white = {
   200: '#FCFCFC',
   300: '#F5F5F7',
   400: '#EBEDF7',
+  500: '#D4D5DE',
 };

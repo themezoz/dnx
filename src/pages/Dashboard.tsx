@@ -7,20 +7,36 @@ import TaskToday from 'components/sections/dashboard/task-today';
 const Dashboard = () => {
   return (
     <Stack>
-      <Box flex={5} height='200vh' p={3.5}>
-        <Stack mx="auto" alignItems="center" width={1} maxWidth={760} spacing={3.5}>
-          <Box flex={3}>
+      <Box p={3.5} width={`calc(100% - 460px)`} height="200vh">
+        <Stack mx="auto" alignItems="center" width={1} spacing={3.5}>
+          <Box minWidth={200}>
             <RunningTask />
           </Box>
-          <Box flex={9}>
+          <Box width={`calc(100% - 200px)`}>
             <Activity />
           </Box>
         </Stack>
       </Box>
 
-      <Box flex={3} height={`calc(100vh - 90px)`} overflow="scroll" bgcolor="info.main" position="sticky" top={90}>
-        <Stack mx="auto" spacing={3.5} p={3.5} width={1} maxWidth={450}>
-          <TaskToday/>
+      <Box
+        height={`calc(100vh - 90px)`}
+        width={460}
+        overflow="scroll"
+        bgcolor="info.main"
+        position="sticky"
+        top={90}
+        padding={0}
+        sx={(theme) => ({
+          '&:hover': {
+            '&::-webkit-scrollbar-thumb': {
+              background: theme.palette.info.darker,
+              visibility: 'visible',
+            },
+          },
+        })}
+      >
+        <Stack mx="auto" direction="column" spacing={3.5} p={3.5} width={1}>
+          <TaskToday />
         </Stack>
       </Box>
     </Stack>
