@@ -48,13 +48,12 @@ const ActivityChart = ({ data, ...rest }: ActivityChartProps) => {
           },
         },
         backgroundColor: theme.palette.primary.dark,
-        padding: [8, 15, 8, 15],
+        padding: [10, 18, 10, 18],
         borderRadius: 10,
+        borderWidth: 0,
         textStyle: {
           color: theme.palette.info.light,
           fontFamily: theme.typography.fontFamily,
-          fontSize: theme.typography.body2.fontSize,
-          fontWeight: 500,
         },
         extraCssText: 'border: none; box-shadow: none',
         confine: true,
@@ -81,9 +80,9 @@ const ActivityChart = ({ data, ...rest }: ActivityChartProps) => {
         formatter: (params: EChartOption.Tooltip.Format | EChartOption.Tooltip.Format[]) => {
           if (Array.isArray(params)) {
             const dataValue = Math.round(params[0].data);
-            const arrowPosition = isTopOffset ? 'bottom:-12px;' : 'top:-12px;';
-            return `<div style="position:relative; margin:0; padding:0; color:${theme.palette.info.lighter}; border-radius:10px;">
-              ${dataValue} Tasks
+            const arrowPosition = isTopOffset ? 'bottom:-14px;' : 'top:-14px;';
+            return `<div style="position:relative; border-radius:10px;">
+              <p style="font-size:${theme.typography.body2.fontSize}; font-weight:500">${dataValue} Task</p>
               <span style="position:absolute; ${arrowPosition} left:50%; transform:translate(-50%) rotate(45deg); width:12px; height:12px; background:${theme.palette.primary.dark}; border-top:none; border-left:none; border-right:none; border-bottom:none; z-index:-10000;"></span>
             </div>`;
           }
