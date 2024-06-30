@@ -5,9 +5,9 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import Image from 'components/base/Image';
-import ListItem from './list-items/ListItem';
 import CollapseListItem from './list-items/CollapseListItem';
+import ListItem from './list-items/ListItem';
+import Image from 'components/base/Image';
 import LogoImg from 'assets/images/Logo.png';
 import FooterImg from 'assets/images/helpCenter.png';
 
@@ -31,7 +31,7 @@ const DrawerItems = () => {
         </ButtonBase>
       </Stack>
 
-      <List component="nav" sx={{ mt: 3, mb: 15 }}>
+      <List component="nav" sx={{ mt: 4, mb: 15, px: 0 }}>
         {sitemap.map((route) =>
           route.items ? (
             <CollapseListItem key={route.id} {...route} />
