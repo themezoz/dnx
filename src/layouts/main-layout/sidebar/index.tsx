@@ -24,6 +24,7 @@ const Sidebar = ({ mobileOpen, setMobileOpen, setIsClosing }: SidebarProps) => {
       width={{ lg: 252 }}
       flexShrink={{ lg: 0 }}
       display={{ xs: 'none', lg: 'block' }}
+      zIndex={1300}
     >
       <Drawer
         variant="temporary"

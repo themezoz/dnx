@@ -35,34 +35,40 @@ const Topbar = ({ isClosing, mobileOpen, setMobileOpen }: TopbarProps) => {
       bgcolor="info.lighter"
       position="sticky"
       top={0}
-      zIndex={1300}
+      zIndex={1200}
     >
-      <Stack spacing={2} alignItems="center">
+      <Stack spacing={{ xs: 1, sm: 2 }} alignItems="center">
+        <ButtonBase
+          component={Link}
+          href="/"
+          disableRipple
+          sx={{ lineHeight: 0, display: { xs: 'none', sm: 'block', lg: 'none' } }}
+        >
+          <Image src={LogoImg} alt="logo" height={54} width={54} />
+        </ButtonBase>
+
         <Toolbar sx={{ display: { xm: 'block', lg: 'none' } }}>
           <IconButton
-            size="medium"
+            size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             onClick={handleDrawerToggle}
           >
-            <IconifyIcon icon="mingcute:menu-line" />
+            <IconifyIcon icon="clarity:menu-line" />
           </IconButton>
         </Toolbar>
 
-        <ButtonBase
-          component={Link}
-          href="/"
-          disableRipple
-          sx={{ display: { xm: 'block', lg: 'none' } }}
-        >
-          <Image src={LogoImg} alt="logo" height={24} width={24} />
-        </ButtonBase>
+        <Toolbar sx={{ display: { xm: 'block', md: 'none' } }}>
+          <IconButton size="large" edge="start" color="inherit" aria-label="search">
+            <IconifyIcon icon="mynaui:search" />
+          </IconButton>
+        </Toolbar>
 
         <TextField
           variant="filled"
           placeholder="Search Task"
-          sx={{ width: 350 }}
+          sx={{ width: 350, display: { xs: 'none', md: 'flex' } }}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
@@ -73,7 +79,7 @@ const Topbar = ({ isClosing, mobileOpen, setMobileOpen }: TopbarProps) => {
         />
       </Stack>
 
-      <Stack spacing={2} alignItems="center">
+      <Stack spacing={{ xs: 1, sm: 2 }} alignItems="center">
         <LanguageSelect />
         <Tooltip title="Notifications">
           <IconButton size="large">
