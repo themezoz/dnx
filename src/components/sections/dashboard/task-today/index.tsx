@@ -107,21 +107,32 @@ const TaskToday = () => {
         </Stack>
 
         <Stack direction="column" spacing={2} mt={2}>
-          {
-            taskDetails.map((task) => (
-              <Stack key={task.id} alignItems="center" spacing={1.5}>
-                <Stack alignItems="center" justifyContent="center" height={36} width={36} borderRadius={2.5} bgcolor="info.main">
-                  <Typography variant="body2" fontWeight={500}>{task.id}</Typography>
-                </Stack>
-                <Typography variant="body2" fontWeight={500}>{task.details}</Typography>
+          {taskDetails.map((task) => (
+            <Stack key={task.id} alignItems="center" spacing={1.5}>
+              <Stack
+                alignItems="center"
+                justifyContent="center"
+                height={36}
+                width={36}
+                borderRadius={2.5}
+                bgcolor="info.main"
+              >
+                <Typography variant="body2" fontWeight={500}>
+                  {task.id}
+                </Typography>
               </Stack>
-            ))
-          }
+              <Typography variant="body2" fontWeight={500}>
+                {task.details}
+              </Typography>
+            </Stack>
+          ))}
         </Stack>
       </CardContent>
 
       <CardActions disableSpacing>
-        <Button variant="contained" color="primary" size="medium" fullWidth>Go To Detail</Button>
+        <Button variant="contained" color="primary" size="medium" fullWidth>
+          Go To Detail
+        </Button>
       </CardActions>
     </Card>
   );

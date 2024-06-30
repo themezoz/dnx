@@ -11,23 +11,6 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       borderRadius: theme.shape.borderRadius * 2.5,
       textTransform: 'initial',
     }),
-    contained: ({ theme }) => ({
-      '&.Mui-disabled': {
-        color: theme.palette.text.secondary,
-        background: theme.palette.text.disabled,
-      },
-    }),
-    outlined: ({ theme }) => ({
-      '&.Mui-disabled': {
-        color: theme.palette.text.disabled,
-        borderColor: theme.palette.text.disabled,
-      },
-    }),
-    text: ({ theme }) => ({
-      '&.Mui-disabled': {
-        color: theme.palette.text.disabled,
-      },
-    }),
     containedPrimary: ({ theme }) => ({
       color: theme.palette.info.lighter,
       background: theme.palette.primary.main,

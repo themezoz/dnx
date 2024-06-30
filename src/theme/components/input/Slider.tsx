@@ -5,7 +5,7 @@ const Slider: Components<Omit<Theme, 'components'>>['MuiSlider'] = {
   styleOverrides: {
     root: ({ theme }) => ({
       padding: 0,
-      height: '8px',
+      height: 8,
       width: '100%',
       '&.Mui-disabled': {
         color: theme.palette.primary.main,
