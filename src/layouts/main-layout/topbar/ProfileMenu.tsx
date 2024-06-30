@@ -21,32 +21,32 @@ const menuItems: MenuItems[] = [
   {
     id: 1,
     title: 'View Profile',
-    icon: 'mingcute:user-2-fill',
+    icon: 'solar:user-circle-outline',
   },
   {
     id: 2,
     title: 'Account Settings',
-    icon: 'material-symbols:settings-account-box-rounded',
+    icon: 'carbon:settings-edit',
   },
   {
     id: 3,
     title: 'Notifications',
-    icon: 'ion:notifications',
+    icon: 'solar:bell-outline',
   },
   {
     id: 4,
     title: 'Switch Account',
-    icon: 'material-symbols:switch-account',
+    icon: 'ph:user-switch',
   },
   {
     id: 5,
     title: 'Help Center',
-    icon: 'material-symbols:live-help',
+    icon: 'carbon:help',
   },
   {
     id: 6,
     title: 'Logout',
-    icon: 'material-symbols:logout',
+    icon: 'mynaui:logout',
   },
 ];
 
@@ -98,8 +98,8 @@ const ProfileMenu = () => {
             width: 240,
             overflow: 'hidden',
             '& .MuiAvatar-root': {
-              width: 34,
-              height: 34,
+              width: 40,
+              height: 40,
               ml: -0.5,
               mr: 1,
             },
@@ -116,11 +116,11 @@ const ProfileMenu = () => {
             }}
           />
           <Stack direction="column">
-            <Typography variant="body2" fontWeight={500}>
-              John Carter
+            <Typography variant="body2" color="text.primary" fontWeight={600}>
+              Alex Stanton
             </Typography>
-            <Typography variant="caption" fontWeight={400} color="text.secondary">
-              john@example.com
+            <Typography variant="caption" color="text.secondary" fontWeight={400}>
+              alex@example.com
             </Typography>
           </Stack>
         </MenuItem>
@@ -130,10 +130,10 @@ const ProfileMenu = () => {
         {menuItems.map((item) => {
           return (
             <MenuItem key={item.id} onClick={handleProfileMenuClose} sx={{ py: 1 }}>
-              <ListItemIcon sx={{ mr: 2, fontSize: 'button.fontSize' }}>
+              <ListItemIcon sx={{ mr: 1, color: 'text.secondary', fontSize: 'h5.fontSize' }}>
                 <IconifyIcon icon={item.icon} />
               </ListItemIcon>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body2" color="text.secondary" fontWeight={500}>
                 {item.title}
               </Typography>
             </MenuItem>

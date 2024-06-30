@@ -1,9 +1,12 @@
 import { PaletteColorOptions, PaletteOptions } from '@mui/material/styles';
-import { gray, darkGray, red, green, blue, yellow, white } from './colors';
+import { gray, darkGray, transparentGray, red, green, blue, yellow, white } from './colors';
 
 declare module '@mui/material/styles' {
   interface PaletteOptions {
     neutral?: PaletteColorOptions;
+    transparent?: {
+      gray: PaletteColorOptions;
+    };
   }
   interface SimplePaletteColorOptions {
     lighter?: string;
@@ -12,6 +15,9 @@ declare module '@mui/material/styles' {
   }
   interface Palette {
     neutral: PaletteColor;
+    transparent: {
+      gray: PaletteColor;
+    };
   }
   interface PaletteColor {
     lighter: string;
@@ -54,6 +60,11 @@ const palette: PaletteOptions = {
     primary: darkGray[500],
     secondary: gray[400],
     disabled: gray[300],
+  },
+  transparent: {
+    gray: {
+      main: transparentGray[500],
+    },
   },
 };
 

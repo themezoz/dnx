@@ -89,3 +89,7 @@ export const white = {
   400: '#EBEDF7',
   500: '#D4D5DE',
 };
+
+export const transparentGray = {
+  500: '#546fff14',
+};

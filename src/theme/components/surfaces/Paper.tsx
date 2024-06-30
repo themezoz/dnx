@@ -10,7 +10,7 @@ const Paper: Components<Omit<Theme, 'components'>>['MuiPaper'] = {
       boxShadow: 'none',
 
       '&.MuiMenu-paper': {
-        padding: theme.spacing(1),
+        padding: theme.spacing(0),
         boxShadow: theme.customShadows[0],
       },
     }),
