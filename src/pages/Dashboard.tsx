@@ -29,7 +29,7 @@ const Dashboard = () => {
         sx={{
           '&:hover': {
             '&::-webkit-scrollbar-thumb': {
-              background: 'info.darker',
+              bgcolor: 'info.darker',
               visibility: 'visible',
             },
           },
