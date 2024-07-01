@@ -11,12 +11,14 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       borderRadius: theme.shape.borderRadius * 2.5,
       textTransform: 'initial',
     }),
+    text: ({ theme }) => ({
+      color: theme.palette.primary.main,
+      background: 'transparent !important',
+    }),
     containedPrimary: ({ theme }) => ({
       color: theme.palette.info.lighter,
       background: theme.palette.primary.main,
-      '&:hover': {
-        background: theme.palette.primary.main,
-      },
+      '&:hover': { background: theme.palette.primary.main },
     }),
     containedSecondary: ({ theme }) => ({
       color: theme.palette.text.primary,
@@ -38,6 +40,12 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
       fontSize: theme.typography.caption.fontSize,
       fontWeight: 700,
     }),
+    startIcon: {
+      marginRight: 0,
+    },
+    endIcon: {
+      marginLeft: 0,
+    },
   },
 };
 
