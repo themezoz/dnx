@@ -23,14 +23,14 @@ const sitemap: MenuItem[] = [
     id: 'dashboard',
     subheader: 'Overview',
     path: '/',
-    icon: 'mynaui:grid',
+    icon: 'hugeicons:grid-view',
     active: true,
   },
   {
     id: 'task',
     subheader: 'Task',
     path: '#!',
-    icon: 'ion:book-outline',
+    icon: 'hugeicons:book-open-01',
   },
   {
     id: 'mentors',
@@ -42,13 +42,13 @@ const sitemap: MenuItem[] = [
     id: 'messages',
     subheader: 'Messages',
     path: '#!',
-    icon: 'mynaui:message-dots',
+    icon: 'mage:message-dots',
   },
   {
     id: 'settings',
     subheader: 'Settings',
     path: '#!',
-    icon: 'ion:settings-outline',
+    icon: 'hugeicons:settings-01',
   },
   {
     id: 'authentication',
