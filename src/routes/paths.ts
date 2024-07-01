@@ -1,31 +1,16 @@
 export const rootPaths = {
   root: '/',
-  pageRoot: 'products',
+  pageRoot: 'pages',
   authRoot: 'auth',
   errorRoot: 'error',
 };
 
 export default {
-  vegetables: `/${rootPaths.pageRoot}/vegetables`,
-  fruits: `/${rootPaths.pageRoot}/fruits`,
-  meat: `/${rootPaths.pageRoot}/meat`,
-  fish: `/${rootPaths.pageRoot}/fish`,
-  eggs: `/${rootPaths.pageRoot}/eggs`,
-  spices: `/${rootPaths.pageRoot}/spices`,
-  rice: `/${rootPaths.pageRoot}/rice`,
-  flour: `/${rootPaths.pageRoot}/flour`,
-  oil: `/${rootPaths.pageRoot}/oil`,
-  teaCoffe: `/${rootPaths.pageRoot}/tea-coffe`,
-  dryFruits: `/${rootPaths.pageRoot}/dry-fruits`,
-  jamJellies: `/${rootPaths.pageRoot}/jam-jellies`,
-  biscuits: `/${rootPaths.pageRoot}/biscuits`,
-  sweets: `/${rootPaths.pageRoot}/sweets`,
-  cakes: `/${rootPaths.pageRoot}/cakes`,
-  breads: `/${rootPaths.pageRoot}/breads`,
-
-  cart: `/cart`,
-  checkout: `/checkout`,
-  comingSoon: `/coming-soon`,
+  dashboard: `/${rootPaths.pageRoot}/dashboard`,
+  task: `/${rootPaths.pageRoot}/task`,
+  mentors: `/${rootPaths.pageRoot}/mentors`,
+  messages: `/${rootPaths.pageRoot}/messages`,
+  settings: `/${rootPaths.pageRoot}/settings`,
 
   login: `/${rootPaths.authRoot}/login`,
   signup: `/${rootPaths.authRoot}/signup`,

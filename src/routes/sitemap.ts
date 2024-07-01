@@ -20,7 +20,7 @@ export interface MenuItem {
 
 const sitemap: MenuItem[] = [
   {
-    id: 'overview',
+    id: 'dashboard',
     subheader: 'Overview',
     path: '/',
     icon: 'mynaui:grid',
