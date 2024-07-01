@@ -56,7 +56,7 @@ const TaskToday = () => {
             Creating Awesome Mobile Apps
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            UI /UX Designer
+            UI/UX Designer
           </Typography>
         </Box>
 
