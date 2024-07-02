@@ -7,20 +7,21 @@ import 'swiper/css/navigation';
 import 'swiper/css';
 
 export interface ReactSwiperProps extends BoxProps {
+  slidesPerView: number;
   children: React.ReactNode;
   onBeforeInit?: (swiper: SwiperClass) => void;
   onSlideChange?: (swiper: SwiperClass) => void;
 }
 
 const ReactSwiper = forwardRef<null | SwiperProps, ReactSwiperProps>(
-  ({ children, onBeforeInit, onSlideChange, ...rest }, ref) => {
+  ({ children, slidesPerView, onBeforeInit, onSlideChange, ...rest }, ref) => {
     return (
       <Box
         component={Swiper}
         ref={ref}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={30}
-        slidesPerView={2}
+        slidesPerView={slidesPerView}
         onBeforeInit={onBeforeInit}
         onSlideChange={onSlideChange}
         width={1}

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import ReactSwiper from 'components/base/ReactSwiper';
 import IconifyIcon from 'components/base/IconifyIcon';
+import useResizeObserver from 'components/hooks/useResizeObserver';
 import 'swiper/css/navigation';
 import 'swiper/css';
 
@@ -16,6 +17,8 @@ interface SliderWrapperProps {
 
 const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
   const swiperRef = useRef<SwiperClass | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const containerSize = useResizeObserver(containerRef);
   const [isSlideBegin, setIsSlideBegin] = useState(true);
   const [isSlideEnd, setIsSlideEnd] = useState(false);
 
@@ -32,10 +35,10 @@ const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
   };
 
   return (
-    <Stack direction="column" spacing={1.75} width={1}>
+    <Stack ref={containerRef} direction="column" spacing={1.75} width={1}>
       <Stack alignItems="center" justifyContent="space-between">
         <Typography variant="h4">{title}</Typography>
-        <Stack alignItems="center" justifyContent="center">
+        <Stack mr={-2} alignItems="center" justifyContent="center">
           <IconButton
             onClick={handlePrev}
             size="large"
@@ -60,6 +63,9 @@ const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
       </Stack>
 
       <ReactSwiper
+        slidesPerView={
+          containerSize > 1440 ? 4 : containerSize > 1024 ? 3 : containerSize > 720 ? 2 : 1
+        }
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
           setIsSlideBegin(swiper.isBeginning);
