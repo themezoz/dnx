@@ -11,7 +11,7 @@ import { CardImg1 } from 'data/images';
 
 const MentorCard = () => {
   return (
-    <Card sx={{ width: 1 }}>
+    <Card>
       <Stack alignItems="center" justifyContent="space-between">
         <Stack alignItems="center" spacing={1}>
           <Box height={48} width={48} borderRadius="50%" overflow="hidden">

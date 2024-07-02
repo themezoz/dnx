@@ -12,7 +12,7 @@ import { Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, CardImg1 } from 'data/imag
 
 const TaskCard = () => {
   return (
-    <Card sx={{ width: 1 }}>
+    <Card>
       <CardMedia component="img" height="110" image={CardImg1} alt="task_today_image" />
       <CardContent>
         <Box mt={1.5}>
