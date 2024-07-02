@@ -1,11 +1,13 @@
-import { Stack, Typography } from '@mui/material';
-import IconButton from '@mui/material/IconButton';
-import IconifyIcon from 'components/base/IconifyIcon';
 import { useRef, useState } from 'react';
+import { SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper/types';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import ReactSwiper from 'components/base/ReactSwiper';
+import IconifyIcon from 'components/base/IconifyIcon';
 import 'swiper/css/navigation';
+import 'swiper/css';
 
 interface SliderWrapperProps {
   title: string;
@@ -39,19 +41,25 @@ const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
             size="large"
             sx={{ border: 'none', bgcolor: 'transparent !important' }}
           >
-            <IconifyIcon icon="oui:arrow-left" color={isSlideBegin ? "text.secondary" : "text.primary"} />
+            <IconifyIcon
+              icon="oui:arrow-left"
+              color={isSlideBegin ? 'text.secondary' : 'text.primary'}
+            />
           </IconButton>
           <IconButton
             onClick={handleNext}
             size="large"
             sx={{ border: 'none', bgcolor: 'transparent !important' }}
           >
-            <IconifyIcon icon="oui:arrow-right" color={isSlideEnd ? "text.secondary" : "text.primary"} />
+            <IconifyIcon
+              icon="oui:arrow-right"
+              color={isSlideEnd ? 'text.secondary' : 'text.primary'}
+            />
           </IconButton>
         </Stack>
       </Stack>
 
-      <Swiper
+      <ReactSwiper
         onBeforeInit={(swiper) => {
           swiperRef.current = swiper;
           setIsSlideBegin(swiper.isBeginning);
@@ -61,23 +69,21 @@ const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
           setIsSlideBegin(swiper.isBeginning);
           setIsSlideEnd(swiper.isEnd);
         }}
-        spaceBetween={30}
-        slidesPerView={2}
-        style={{ width: '100%' }}
+        sx={{ '& .swiper-slide': { width: 300 } }}
       >
-        <SwiperSlide style={{ width: '300px' }}>
+        <SwiperSlide>
           <SliderCard />
         </SwiperSlide>
-        <SwiperSlide style={{ width: '300px' }}>
+        <SwiperSlide>
           <SliderCard />
         </SwiperSlide>
-        <SwiperSlide style={{ width: '300px' }}>
+        <SwiperSlide>
           <SliderCard />
         </SwiperSlide>
-        <SwiperSlide style={{ width: '300px' }}>
+        <SwiperSlide>
           <SliderCard />
         </SwiperSlide>
-      </Swiper>
+      </ReactSwiper>
     </Stack>
   );
 };
