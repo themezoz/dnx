@@ -5,6 +5,7 @@ import MonthlyMentors from 'components/sections/dashboard/monthly-mentors';
 import RunningTask from 'components/sections/dashboard/running-task';
 import TaskToday from 'components/sections/dashboard/task-today';
 import UpcomingTask from 'components/sections/dashboard/upcoming-task';
+import WeekCalendar from 'components/sections/dashboard/week-calendar';
 
 const Dashboard = () => {
   return (
@@ -45,7 +46,8 @@ const Dashboard = () => {
           },
         }}
       >
-        <Stack mx="auto" p={3.5} width={1} spacing={3.5} direction="column">
+        <Stack p={3.5} width={1} spacing={3.5} direction="column">
+          <WeekCalendar/>
           <TaskToday />
         </Stack>
       </Box>
