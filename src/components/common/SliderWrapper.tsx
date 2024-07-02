@@ -38,11 +38,11 @@ const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
     <Stack ref={containerRef} direction="column" spacing={1.75} width={1}>
       <Stack alignItems="center" justifyContent="space-between">
         <Typography variant="h4">{title}</Typography>
-        <Stack mr={-2} alignItems="center" justifyContent="center">
+        <Stack mr={-1} alignItems="center" justifyContent="center">
           <IconButton
             onClick={handlePrev}
             size="large"
-            sx={{ border: 'none', bgcolor: 'transparent !important' }}
+            sx={{ p: 1, border: 'none', bgcolor: 'transparent !important' }}
           >
             <IconifyIcon
               icon="oui:arrow-left"
@@ -52,7 +52,7 @@ const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
           <IconButton
             onClick={handleNext}
             size="large"
-            sx={{ border: 'none', bgcolor: 'transparent !important' }}
+            sx={{ p: 1, border: 'none', bgcolor: 'transparent !important' }}
           >
             <IconifyIcon
               icon="oui:arrow-right"
