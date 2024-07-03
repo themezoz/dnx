@@ -1,6 +1,6 @@
 import Avatar1 from 'assets/images/avatars/avatar1.png';
 import Avatar2 from 'assets/images/avatars/avatar2.png';
-import Avatar3 from 'assets/images/avatars/avater3.png';
+import Avatar3 from 'assets/images/avatars/avatar3.png';
 import Avatar4 from 'assets/images/avatars/avatar4.png';
 import Avatar5 from 'assets/images/avatars/avatar6.png';
 import Avatar6 from 'assets/images/avatars/avatar6.png';

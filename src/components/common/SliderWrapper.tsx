@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
-import { SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperClass } from 'swiper/types';
+import { SwiperSlide } from 'swiper/react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -10,12 +10,17 @@ import useResizeObserver from 'components/hooks/useResizeObserver';
 import 'swiper/css/navigation';
 import 'swiper/css';
 
-interface SliderWrapperProps {
-  title: string;
-  SliderCard: React.ComponentType<unknown>;
+interface HasId {
+  id: string | number;
 }
 
-const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
+interface SliderWrapperProps<T> {
+  title: string;
+  SliderCard: React.ComponentType<{ data: T }>;
+  data: T[];
+}
+
+const SliderWrapper = <T extends HasId>({ title, SliderCard, data }: SliderWrapperProps<T>) => {
   const swiperRef = useRef<SwiperClass | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const containerSize = useResizeObserver(containerRef);
@@ -77,18 +82,11 @@ const SliderWrapper = ({ title, SliderCard }: SliderWrapperProps) => {
         }}
         sx={{ '& .swiper-slide': { width: 300 } }}
       >
-        <SwiperSlide>
-          <SliderCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <SliderCard />
-        </SwiperSlide>
+        {data.map((item) => (
+          <SwiperSlide key={item.id}>
+            <SliderCard data={item} />
+          </SwiperSlide>
+        ))}
       </ReactSwiper>
     </Stack>
   );

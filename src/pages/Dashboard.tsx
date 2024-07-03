@@ -12,8 +12,8 @@ const Dashboard = () => {
     <Stack direction={{ xs: 'column', md: 'row' }}>
       <Stack p={3.5} spacing={3.5} direction="column" width={{ xs: 1, md: 'calc(100% - 460px)' }}>
         <Stack
-          spacing={3.5}
           width={1}
+          spacing={3.5}
           direction={{ xs: 'column', sm: 'row', md: 'column', xl: 'row' }}
           alignItems="center"
         >
