@@ -43,23 +43,32 @@ const MentorCard = ({ data }: MentorCardProps) => {
           <Button
             variant="text"
             size="medium"
-            startIcon={<IconifyIcon icon="gridicons:plus-small" />}
+            sx={{ color: data.followed ? 'text.secondary' : 'primary.main' }}
+            startIcon={data.followed ? '' : <IconifyIcon icon="gridicons:plus-small" />}
             fullWidth
           >
-            Follow
+            {data.followed ? 'Followed' : 'Follow'}
           </Button>
         </CardActions>
       </Stack>
 
-      <CardContent sx={{mt: 2.75}}>
+      <CardContent sx={{ mt: 2.75 }}>
         <Stack alignItems="center" justifyContent="space-between">
           <Stack alignItems="center" spacing={0.875}>
             <IconifyIcon icon="hugeicons:note" color="text.secondary" fontSize="h4.fontSize" />
-            <Typography color="text.primary" fontSize="body2.fontSize" fontWeight={600}>{data.task} Task</Typography>
+            <Typography color="text.primary" fontSize="body2.fontSize" fontWeight={600}>
+              {data.task} Task
+            </Typography>
           </Stack>
           <Stack alignItems="center" spacing={0.5}>
-            <IconifyIcon icon="material-symbols:star-rate-rounded" color="warning.main" fontSize="h4.fontSize" />
-            <Typography color="text.primary" fontSize="body2.fontSize" fontWeight={600}>{data.rating}  ({data.review} Reviews)</Typography>
+            <IconifyIcon
+              icon="material-symbols:star-rate-rounded"
+              color="warning.main"
+              fontSize="h4.fontSize"
+            />
+            <Typography color="text.primary" fontSize="body2.fontSize" fontWeight={600}>
+              {data.rating} ({data.review} Reviews)
+            </Typography>
           </Stack>
         </Stack>
       </CardContent>

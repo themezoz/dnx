@@ -30,7 +30,7 @@ export const mentors: Mentor[] = [
     task: 32,
     rating: 4.9,
     review: 510,
-    followed: false,
+    followed: true,
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ export const mentors: Mentor[] = [
     task: 60,
     rating: 4.9,
     review: 970,
-    followed: true,
+    followed: false,
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ export const mentors: Mentor[] = [
     task: 28,
     rating: 4.8,
     review: 370,
-    followed: false,
+    followed: true,
   },
   {
     id: 6,
@@ -70,7 +70,7 @@ export const mentors: Mentor[] = [
     task: 60,
     rating: 4.8,
     review: 870,
-    followed: true,
+    followed: false,
   },
   {
     id: 7,
