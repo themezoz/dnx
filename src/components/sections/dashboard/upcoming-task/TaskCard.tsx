@@ -8,19 +8,23 @@ import CardContent from '@mui/material/CardContent';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
-import { Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, CardImg1 } from 'data/images';
+import { Task } from 'data/tasks';
 
-const TaskCard = () => {
+interface TaskCardProps {
+  data: Task;
+}
+
+const TaskCard = ({ data }: TaskCardProps) => {
   return (
     <Card>
-      <CardMedia component="img" height="110" image={CardImg1} alt="task_today_image" />
+      <CardMedia component="img" height="110" image={data.thumb} alt="task_today_image" />
       <CardContent>
         <Box mt={1.5}>
           <Typography variant="subtitle1" color="text.primary" fontWeight={600}>
-            Creating Mobile App Design
+            {data.title}
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            UI/UX Designer
+            {data.category}
           </Typography>
         </Box>
 
@@ -30,11 +34,11 @@ const TaskCard = () => {
               Progress
             </Typography>
             <Typography variant="body1" color="primary.main" fontWeight={500}>
-              75%
+              {data.progress}%
             </Typography>
           </Stack>
           <Slider
-            defaultValue={75}
+            defaultValue={data.progress}
             color="primary"
             aria-label="Default"
             valueLabelDisplay="auto"
@@ -46,16 +50,14 @@ const TaskCard = () => {
           <Stack alignItems="center" spacing={1}>
             <IconifyIcon icon="mynaui:clock-circle" color="text.secondary" fontSize="h4.fontSize" />
             <Typography variant="body1" fontWeight={500}>
-              3 Days Left
+              {data.daysLeft} Days Left
             </Typography>
           </Stack>
 
           <AvatarGroup max={5}>
-            <Avatar alt="Remy Sharp" src={Avatar1} />
-            <Avatar alt="Travis Howard" src={Avatar2} />
-            <Avatar alt="Cindy Baker" src={Avatar3} />
-            <Avatar alt="Agnes Walker" src={Avatar4} />
-            <Avatar alt="Trevor Henderson" src={Avatar5} />
+            {data.avatars.map((avatar) => (
+              <Avatar alt="avatar_img" src={avatar} />
+            ))}
           </AvatarGroup>
         </Stack>
       </CardContent>

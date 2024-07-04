@@ -11,7 +11,7 @@ import AvatarGroup from '@mui/material/AvatarGroup';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import IconifyIcon from 'components/base/IconifyIcon';
-import { Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, CardImg1 } from 'data/images';
+import { Avatar1, Avatar2, Avatar3, Avatar4, Avatar5, Thumb5 } from 'data/images';
 import { Divider, Button } from '@mui/material';
 
 interface TaskDetail {
@@ -49,14 +49,14 @@ const TaskToday = () => {
         }
         title="Task Today"
       />
-      <CardMedia component="img" height="160" image={CardImg1} alt="task_today_image" />
+      <CardMedia component="img" height="160" image={Thumb5} alt="task_today_image" />
       <CardContent>
         <Box mt={2}>
           <Typography variant="subtitle1" color="text.primary" fontWeight={600}>
             Creating Awesome Mobile Apps
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            UI/UX Designer
+            UI / UX Designer
           </Typography>
         </Box>
 
