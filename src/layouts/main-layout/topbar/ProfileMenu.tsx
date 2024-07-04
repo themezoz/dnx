@@ -21,12 +21,12 @@ const menuItems: MenuItems[] = [
   {
     id: 1,
     title: 'View Profile',
-    icon: 'solar:user-circle-outline',
+    icon: 'hugeicons:user-circle-02',
   },
   {
     id: 2,
     title: 'Account Settings',
-    icon: 'carbon:settings-edit',
+    icon: 'hugeicons:account-setting-02',
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const menuItems: MenuItems[] = [
   {
     id: 4,
     title: 'Switch Account',
-    icon: 'ph:user-switch',
+    icon: 'hugeicons:user-switch',
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const menuItems: MenuItems[] = [
   {
     id: 6,
     title: 'Logout',
-    icon: 'mynaui:logout',
+    icon: 'hugeicons:logout-03',
   },
 ];
 
