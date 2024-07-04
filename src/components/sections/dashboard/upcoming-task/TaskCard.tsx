@@ -56,7 +56,7 @@ const TaskCard = ({ data }: TaskCardProps) => {
 
           <AvatarGroup max={5}>
             {data.avatars.map((avatar) => (
-              <Avatar alt="avatar_img" src={avatar} />
+              <Avatar key={avatar} alt="avatar_img" src={avatar} />
             ))}
           </AvatarGroup>
         </Stack>
