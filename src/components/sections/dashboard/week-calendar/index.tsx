@@ -55,7 +55,7 @@ const WeekCalendar = () => {
 
       <Stack justifyContent="space-between">
         {daysOfWeek.map((day, index) => {
-          const isSelectedDate = day.isSame(selectedDate, 'day');
+          const isToday = day.isSame(new Date(), 'day');
           return (
             <Stack
               key={day.format('YYYY-MM-DD')}
@@ -66,13 +66,12 @@ const WeekCalendar = () => {
               py={0.75}
               spacing={1.25}
               borderRadius={7}
-              bgcolor={isSelectedDate ? 'primary.dark' : 'info.lighter'}
-              sx={{ cursor: 'pointer' }}
+              bgcolor={isToday ? 'primary.dark' : 'info.lighter'}
               onClick={() => setSelectedDate(day.toDate())}
             >
               <Typography
                 variant="body2"
-                color={isSelectedDate ? 'info.lighter' : 'text.primary'}
+                color={isToday ? 'info.lighter' : 'text.primary'}
                 fontWeight={500}
               >
                 {daysOfWeekLetters[index]}
@@ -83,12 +82,12 @@ const WeekCalendar = () => {
                 alignItems="center"
                 justifyContent="center"
                 borderRadius="50%"
-                bgcolor={isSelectedDate ? 'primary.main' : 'info.main'}
+                bgcolor={isToday ? 'primary.main' : 'info.main'}
               >
                 <Typography
                   variant="body2"
                   fontWeight={500}
-                  color={isSelectedDate ? 'info.lighter' : 'text.primary'}
+                  color={isToday ? 'info.lighter' : 'text.primary'}
                 >
                   {day.format('D')}
                 </Typography>
