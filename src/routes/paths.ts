@@ -1,7 +1,7 @@
 export const rootPaths = {
   root: '/',
   pageRoot: 'pages',
-  authRoot: 'auth',
+  authRoot: 'authentication',
   errorRoot: 'error',
 };
 

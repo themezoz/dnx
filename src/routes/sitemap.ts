@@ -1,4 +1,4 @@
-// import paths from './paths';
+import paths from './paths';
 
 export interface SubMenuItem {
   name: string;
@@ -59,12 +59,12 @@ const sitemap: MenuItem[] = [
       {
         name: 'Login',
         pathName: 'login',
-        path: '#!',
+        path: paths.login,
       },
       {
         name: 'Signup',
         pathName: 'signup',
-        path: '#!',
+        path: paths.signup,
       },
     ],
   },
