@@ -31,6 +31,8 @@ import Slider from './components/input/Slider';
 import AvatarGroup from './components/data-display/AvatarGroup';
 import Divider from './components/data-display/Divider';
 import CardActions from './components/card/CardActions';
+import FormControlLabel from './components/input/FormControlLabel';
+import Checkbox from './components/input/Checkbox';
 
 export const theme = createTheme({
   typography,
@@ -55,6 +57,8 @@ export const theme = createTheme({
     MuiFilledInput: FilledInput,
     MuiOutlinedInput: OutlinedInput,
     MuiInputAdornment: InputAdornment,
+    MuiFormControlLabel: FormControlLabel,
+    MuiCheckbox: Checkbox,
     MuiSelect: Select,
     MuiSlider: Slider,
     MuiBadge: Badge,

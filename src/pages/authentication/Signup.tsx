@@ -29,10 +29,10 @@ const Signup = () => {
 
   return (
     <>
-      <Typography align="center" variant="h3" fontWeight={600}>
+      <Typography align="center" variant="h4">
         SignUp
       </Typography>
-      <Stack direction={{ xs: 'column', sm: 'row' }} mt={4} spacing={2} width={1}>
+      <Stack direction="column" mt={4} spacing={2} width={1}>
         <Button
           variant="contained"
           color="primary"
@@ -46,11 +46,12 @@ const Signup = () => {
           color="secondary"
           fullWidth
           startIcon={<IconifyIcon icon="uim:apple" />}
+          sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
           Signup with Apple
         </Button>
       </Stack>
-      <Divider sx={{ my: 3 }}>or Signup with</Divider>
+      <Divider sx={{ my: 4 }}>or Signup with</Divider>
       <Stack onSubmit={handleSubmit} component="form" direction="column" gap={2}>
         <TextField
           id="name"
@@ -92,13 +93,23 @@ const Signup = () => {
           required
           InputProps={{
             endAdornment: (
-              <InputAdornment position="end" sx={{ opacity: user.password ? 1 : 0 }}>
+              <InputAdornment
+                position="end"
+                sx={{
+                  opacity: user.password ? 1 : 0,
+                  pointerEvents: user.password ? 'auto' : 'none',
+                }}
+              >
                 <IconButton
                   aria-label="toggle password visibility"
                   onClick={() => setShowPassword(!showPassword)}
+                  sx={{ border: 'none', bgcolor: 'transparent !important' }}
                   edge="end"
                 >
-                  <IconifyIcon icon={showPassword ? 'ion:eye' : 'ion:eye-off'} />
+                  <IconifyIcon
+                    icon={showPassword ? 'fluent-mdl2:view' : 'fluent-mdl2:hide-3'}
+                    color="neutral.lighter"
+                  />
                 </IconButton>
               </InputAdornment>
             ),
@@ -108,13 +119,13 @@ const Signup = () => {
           Submit
         </Button>
         <Typography
-          my={3}
+          mt={3}
           color="text.secondary"
           variant="body2"
           align="center"
           letterSpacing={0.5}
         >
-          Already have an account? <Link href={paths.login}>{'Login'}</Link>
+          Already have an account? <Link href={paths.login}>Login</Link>
         </Typography>
       </Stack>
     </>
