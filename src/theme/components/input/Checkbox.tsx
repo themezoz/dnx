@@ -1,20 +1,27 @@
 import { Theme } from '@mui/material';
 import { Components } from '@mui/material/styles/components';
+import IconifyIcon from 'components/base/IconifyIcon';
 
 const Checkbox: Components<Omit<Theme, 'components'>>['MuiCheckbox'] = {
+  defaultProps: {
+    icon: <IconifyIcon icon="mdi:checkbox-blank" />,
+    checkedIcon: <IconifyIcon icon="mdi:checkbox-marked" />,
+    indeterminateIcon: <IconifyIcon icon="mdi:indeterminate-check-box" />,
+    // disableRipple: true
+  },
   styleOverrides: {
     root: ({ theme }) => ({
-      padding: 0,
-      color: theme.palette.neutral.lighter,
+      color: theme.palette.info.darker,
     }),
     sizeMedium: ({ theme }) => ({
+      padding: theme.spacing(0.75),
       '& .MuiBox-root': {
-        fontSize: theme.typography.h4.fontSize,
+        fontSize: theme.typography.h5.fontSize,
       },
     }),
     sizeSmall: ({ theme }) => ({
       '& .MuiBox-root': {
-        fontSize: theme.typography.h5.fontSize,
+        fontSize: theme.typography.h6.fontSize,
       },
     }),
   },

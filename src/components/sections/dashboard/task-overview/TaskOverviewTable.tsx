@@ -210,6 +210,7 @@ const TaskOverviewTable = () => {
         expand: true,
       }}
       autoHeight
+      checkboxSelection
       pageSizeOptions={[5]}
     />
   );

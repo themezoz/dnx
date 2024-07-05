@@ -36,6 +36,14 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
         outline: 'none !important',
       },
     }),
+    cellCheckbox: ({ theme }) => ({
+      paddingLeft: theme.spacing(1),
+    }),
+    columnHeaderCheckbox: ({ theme }) => ({
+      '& .MuiDataGrid-columnHeaderTitleContainer': {
+        paddingLeft: theme.spacing(1),
+      },
+    }),
     columnHeader: {
       border: 0,
       padding: 0,
