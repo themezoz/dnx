@@ -7,6 +7,20 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
       border: 'none',
       borderRadius: '0 !important',
       '--DataGrid-rowBorderColor': theme.palette.info.main,
+      '&:hover, &:focus': {
+        '*::-webkit-scrollbar, *::-webkit-scrollbar-thumb': {
+          visibility: 'visible',
+        },
+        '*::-webkit-scrollbar-thumb': {
+          background: theme.palette.info.darker,
+        },
+      },
+      '& .MuiDataGrid-scrollbar--vertical': {
+        visibility: 'hidden',
+      },
+      '& .MuiDataGrid-scrollbarFiller': {
+        minWidth: 0,
+      },
     }),
     row: {
       '&:hover': {
@@ -18,10 +32,6 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
       color: theme.palette.primary.darker,
       fontSize: theme.typography.body2.fontSize,
       fontWeight: 500,
-
-      '&:hover': {
-        cursor: 'pointer',
-      },
       '&:focus-within': {
         outline: 'none !important',
       },
@@ -39,6 +49,15 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
       fontSize: theme.typography.body2.fontSize,
       fontWeight: `${theme.typography.caption.fontWeight} !important`,
     }),
+    iconButtonContainer: () => ({
+      '& .MuiIconButton-root': {
+        backgroundColor: 'transparent !important',
+        border: 'none',
+      },
+    }),
+    columnSeparator: {
+      display: 'none',
+    },
   },
 };
 
