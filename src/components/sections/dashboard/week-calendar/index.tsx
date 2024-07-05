@@ -15,11 +15,13 @@ const daysOfWeekLetters = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
 const WeekCalendar = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const startOfCurrentWeek = dayjs(selectedDate).startOf('isoWeek');
+  const startOfCurrentWeek = dayjs(selectedDate).startOf('week');
 
   const daysOfWeek = Array.from(new Array(7)).map((_, index) =>
     startOfCurrentWeek.add(index, 'day'),
   );
+
+  console.log(daysOfWeek);
 
   const handlePrevMonth = () => {
     const newDate = dayjs(selectedDate).subtract(1, 'month').startOf('month');
