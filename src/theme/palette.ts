@@ -28,17 +28,19 @@ declare module '@mui/material/styles' {
 
 const palette: PaletteOptions = {
   neutral: {
-    lighter: gray[200],
-    light: gray[400],
+    light: gray[200],
     main: gray[500],
     darker: gray[900],
   },
   primary: {
+    light: blue[100],
     main: blue[500],
     dark: darkGray[500],
   },
   secondary: {
-    main: blue[200],
+    light: blue[200],
+    main: blue[600],
+    dark: darkGray[800],
   },
   info: {
     lighter: white[100],
@@ -48,13 +50,19 @@ const palette: PaletteOptions = {
     darker: white[500],
   },
   success: {
+    light: green[100],
     main: green[500],
+    dark: green[800],
   },
   warning: {
+    light: yellow[100],
     main: yellow[500],
+    dark: yellow[800],
   },
   error: {
+    light: red[100],
     main: red[500],
+    dark: red[800],
   },
   text: {
     primary: darkGray[500],

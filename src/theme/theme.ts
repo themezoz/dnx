@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import type {} from '@mui/x-data-grid/themeAugmentation';
 import palette from './palette';
 import typography from './typography';
 import customShadows from './shadows';
@@ -33,6 +34,8 @@ import Divider from './components/data-display/Divider';
 import CardActions from './components/card/CardActions';
 import FormControlLabel from './components/input/FormControlLabel';
 import Checkbox from './components/input/Checkbox';
+import DataGrid from './components/data-grid/DataGrid';
+import Chip from './components/data-display/Chip';
 
 export const theme = createTheme({
   typography,
@@ -62,6 +65,7 @@ export const theme = createTheme({
     MuiSelect: Select,
     MuiSlider: Slider,
     MuiBadge: Badge,
+    MuiChip: Chip,
     MuiCard: Card,
     MuiCardMedia: CardMedia,
     MuiCardHeader: CardHeader,
@@ -69,6 +73,7 @@ export const theme = createTheme({
     MuiCardActions: CardActions,
     MuiAvatarGroup: AvatarGroup,
     MuiDivider: Divider,
+    MuiDataGrid: DataGrid,
     MuiCssBaseline: CssBaseline,
   },
 });
