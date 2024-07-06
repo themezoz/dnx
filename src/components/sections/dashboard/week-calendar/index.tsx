@@ -21,8 +21,6 @@ const WeekCalendar = () => {
     startOfCurrentWeek.add(index, 'day'),
   );
 
-  console.log(daysOfWeek);
-
   const handlePrevMonth = () => {
     const newDate = dayjs(selectedDate).subtract(1, 'month').startOf('month');
     setSelectedDate(newDate.toDate());
