@@ -11,9 +11,6 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
         '*::-webkit-scrollbar, *::-webkit-scrollbar-thumb': {
           visibility: 'visible',
         },
-        '*::-webkit-scrollbar-thumb': {
-          backgroundColor: theme.palette.info.darker,
-        },
       },
       '& .MuiDataGrid-scrollbar--vertical': {
         visibility: 'hidden',

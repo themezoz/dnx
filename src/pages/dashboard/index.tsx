@@ -35,9 +35,8 @@ const Dashboard = () => {
         position="sticky"
         top={90}
         sx={{
-          '&:hover': {
+          '&:hover, &:focus': {
             '&::-webkit-scrollbar-thumb': {
-              bgcolor: 'info.darker',
               visibility: 'visible',
             },
           },
