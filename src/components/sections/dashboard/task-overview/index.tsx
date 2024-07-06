@@ -17,7 +17,9 @@ const TaskOverview = () => {
   return (
     <Stack direction="column" spacing={1} width={1}>
       <Stack alignItems="center" justifyContent="space-between">
-        <Typography variant="h4">Task Overview</Typography>
+        <Typography variant="h4" minWidth={200}>
+          Task Overview
+        </Typography>
         <TextField
           variant="filled"
           size="small"

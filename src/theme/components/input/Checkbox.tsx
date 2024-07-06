@@ -7,11 +7,10 @@ const Checkbox: Components<Omit<Theme, 'components'>>['MuiCheckbox'] = {
     icon: <IconifyIcon icon="mdi:checkbox-blank" />,
     checkedIcon: <IconifyIcon icon="mdi:checkbox-marked" />,
     indeterminateIcon: <IconifyIcon icon="mdi:indeterminate-check-box" />,
-    // disableRipple: true
   },
   styleOverrides: {
     root: ({ theme }) => ({
-      color: theme.palette.info.dark,
+      color: theme.palette.neutral.lighter,
     }),
     sizeMedium: ({ theme }) => ({
       padding: theme.spacing(0.75),

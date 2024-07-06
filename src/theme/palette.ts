@@ -28,6 +28,7 @@ declare module '@mui/material/styles' {
 
 const palette: PaletteOptions = {
   neutral: {
+    lighter: gray[100],
     light: gray[200],
     main: gray[500],
     darker: gray[900],

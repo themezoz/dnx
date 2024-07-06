@@ -43,7 +43,10 @@ const MentorCard = ({ data }: MentorCardProps) => {
           <Button
             variant="text"
             size="medium"
-            sx={{ color: data.followed ? 'text.secondary' : 'primary.main' }}
+            sx={{
+              color: data.followed ? 'text.secondary' : 'primary.main',
+              '& .MuiButton-startIcon': { mr: 0, pointerEvents: 'none' },
+            }}
             startIcon={data.followed ? '' : <IconifyIcon icon="gridicons:plus-small" />}
             fullWidth
           >
