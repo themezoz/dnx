@@ -15,6 +15,7 @@ import {
   Avatar7,
   Avatar8,
 } from 'data/images';
+import ActionMenu from './ActionMenu';
 
 const rows = [
   {
@@ -133,10 +134,10 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     editable: false,
     align: 'left',
     flex: 2,
-    minWidth: 210,
+    minWidth: 200,
     renderCell: (params) => {
       return (
-        <Stack alignItems="center" gap={1} sx={{ height: 1, width: 1 }}>
+        <Stack alignItems="center" gap={1} pr={2} height={1} width={1}>
           <Typography variant="body2" minWidth={40}>
             {params.value}%
           </Typography>
@@ -157,8 +158,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
   {
     field: 'status',
     headerName: 'Status',
-    headerAlign: 'right',
-    align: 'right',
+    headerAlign: 'center',
     editable: false,
     flex: 1,
     minWidth: 140,
@@ -172,7 +172,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
               ? 'warning'
               : 'info';
       return (
-        <Stack direction="column" alignItems="flex-end" justifyContent="center" height={1}>
+        <Stack direction="column" alignItems="center" justifyContent="center" height={1}>
           <Chip label={params.value} size="small" color={color} />
         </Stack>
       );
@@ -185,7 +185,18 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     align: 'right',
     editable: false,
     flex: 1,
-    minWidth: 110,
+    minWidth: 100,
+  },
+  {
+    field: 'action',
+    headerAlign: 'right',
+    align: 'right',
+    editable: false,
+    sortable: false,
+    flex: 1,
+    minWidth: 100,
+    renderHeader: () => <ActionMenu />,
+    renderCell: () => <ActionMenu />,
   },
 ];
 
