@@ -97,7 +97,7 @@ const Login = () => {
                 >
                   <IconifyIcon
                     icon={showPassword ? 'fluent-mdl2:view' : 'fluent-mdl2:hide-3'}
-                    color="neutral.lighter"
+                    color="neutral.light"
                   />
                 </IconButton>
               </InputAdornment>
@@ -106,19 +106,11 @@ const Login = () => {
         />
         <Stack mt={-1} alignItems="center" justifyContent="space-between">
           <FormControlLabel
-            control={
-              <Checkbox
-                id="checkbox"
-                name="checkbox"
-                size="small"
-                icon={<IconifyIcon icon="fluent:checkbox-unchecked-16-regular" />}
-                checkedIcon={<IconifyIcon icon="fluent:checkbox-checked-16-filled" />}
-                color="primary"
-              />
-            }
+            control={<Checkbox id="checkbox" name="checkbox" size="small" color="primary" />}
             label="Remember me"
+            sx={{ ml: -1 }}
           />
-          <Link href="#!" fontSize="body2.fontSize" letterSpacing={0.5}>
+          <Link href="#!" fontSize="body2.fontSize">
             Forgot password?
           </Link>
         </Stack>
@@ -127,10 +119,10 @@ const Login = () => {
         </Button>
         <Typography
           mt={3}
+          letterSpacing={0.25}
           color="text.secondary"
           variant="body2"
           align="center"
-          letterSpacing={0.5}
         >
           Don't have an account? <Link href={paths.signup}>Signup</Link>
         </Typography>

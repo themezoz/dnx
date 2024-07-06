@@ -1,8 +1,8 @@
 import { useState, ChangeEvent, FormEvent } from 'react';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -108,7 +108,7 @@ const Signup = () => {
                 >
                   <IconifyIcon
                     icon={showPassword ? 'fluent-mdl2:view' : 'fluent-mdl2:hide-3'}
-                    color="neutral.lighter"
+                    color="neutral.light"
                   />
                 </IconButton>
               </InputAdornment>
@@ -120,10 +120,10 @@ const Signup = () => {
         </Button>
         <Typography
           mt={3}
+          letterSpacing={0.25}
           color="text.secondary"
           variant="body2"
           align="center"
-          letterSpacing={0.5}
         >
           Already have an account? <Link href={paths.login}>Login</Link>
         </Typography>

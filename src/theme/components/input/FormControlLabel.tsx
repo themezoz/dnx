@@ -7,10 +7,10 @@ const FormControlLabel: Components<Omit<Theme, 'components'>>['MuiFormControlLab
       marginLeft: 0,
     },
     label: ({ theme }) => ({
-      letterSpacing: 0.5,
+      marginLeft: 0,
+      letterSpacing: 0.25,
       color: theme.palette.text.secondary,
       fontSize: theme.typography.body2.fontSize,
-      marginLeft: theme.spacing(0.75),
       userSelect: 'none',
     }),
   },
