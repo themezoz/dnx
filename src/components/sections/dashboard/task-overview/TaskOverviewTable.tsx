@@ -236,7 +236,6 @@ const TaskOverviewTable = ({ searchText }: TaskOverviewTableProps) => {
       slots={{
         pagination: DataGridFooter,
       }}
-      autoHeight
       checkboxSelection
       pageSizeOptions={[5]}
     />

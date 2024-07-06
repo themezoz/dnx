@@ -68,7 +68,7 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
     },
     footerContainer: () => ({
       border: 'none',
-    })
+    }),
   },
 };
 
