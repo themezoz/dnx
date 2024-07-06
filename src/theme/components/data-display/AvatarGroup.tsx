@@ -4,10 +4,13 @@ import { Components } from '@mui/material/styles/components';
 const AvatarGroup: Components<Omit<Theme, 'components'>>['MuiAvatarGroup'] = {
   styleOverrides: {
     root: {},
-    avatar: {
-      height: 24,
+    avatar: ({ theme }) => ({
       width: 24,
-    },
+      height: 24,
+      color: theme.palette.info.lighter,
+      fontSize: theme.typography.body2.fontSize,
+      background: theme.palette.primary.main,
+    }),
   },
 };
 
