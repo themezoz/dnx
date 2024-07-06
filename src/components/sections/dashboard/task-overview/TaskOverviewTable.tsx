@@ -115,6 +115,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     field: 'members',
     headerName: 'Members',
     editable: false,
+    sortable: false,
     align: 'left',
     flex: 2,
     minWidth: 140,
