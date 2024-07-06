@@ -29,7 +29,7 @@ export const rows = [
   {
     id: 3,
     task: 'Fixing Critical Bugs',
-    members: [Avatar2, Avatar5, Avatar8, Avatar4, Avatar7, Avatar1, Avatar6, Avatar3],
+    members: [Avatar2, Avatar5, Avatar8, Avatar4, Avatar7, Avatar1],
     progress: 100,
     status: 'completed',
     timeLeft: '5 Hours',
