@@ -7,8 +7,6 @@ import IconButton from '@mui/material/IconButton';
 import ReactSwiper from 'components/base/ReactSwiper';
 import IconifyIcon from 'components/base/IconifyIcon';
 import useResizeObserver from 'components/hooks/useResizeObserver';
-import 'swiper/css/navigation';
-import 'swiper/css';
 
 interface HasId {
   id: string | number;
