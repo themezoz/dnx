@@ -1,11 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
 import { Suspense, lazy } from 'react';
-import paths, { rootPaths } from './paths';
 import { Outlet, createBrowserRouter } from 'react-router-dom';
+import paths, { rootPaths } from './paths';
 import MainLayout from 'layouts/main-layout';
+import AuthLayout from 'layouts/auth-layout';
 import Splash from 'components/loader/Splash';
 import PageLoader from 'components/loader/PageLoader';
-import AuthLayout from 'layouts/auth-layout';
 
 const App = lazy(() => import('App'));
 const Dashboard = lazy(() => import('pages/dashboard'));
