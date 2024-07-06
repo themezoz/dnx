@@ -13,17 +13,17 @@ const Button: Components<Omit<Theme, 'components'>>['MuiButton'] = {
     }),
     text: ({ theme }) => ({
       color: theme.palette.primary.main,
-      background: 'transparent !important',
+      backgroundColor: 'transparent !important',
     }),
     containedPrimary: ({ theme }) => ({
       color: theme.palette.info.lighter,
-      background: theme.palette.primary.main,
-      '&:hover': { background: theme.palette.primary.main },
+      backgroundColor: theme.palette.primary.main,
+      '&:hover': { backgroundColor: theme.palette.primary.main },
     }),
     containedSecondary: ({ theme }) => ({
       color: theme.palette.text.primary,
-      background: theme.palette.info.lighter,
-      '&:hover': { background: theme.palette.info.lighter },
+      backgroundColor: theme.palette.info.lighter,
+      '&:hover': { backgroundColor: theme.palette.info.lighter },
     }),
     sizeLarge: ({ theme }) => ({
       padding: theme.spacing(1.25, 2.25),

@@ -12,7 +12,7 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
           visibility: 'visible',
         },
         '*::-webkit-scrollbar-thumb': {
-          background: theme.palette.info.darker,
+          backgroundColor: theme.palette.info.darker,
         },
       },
       '& .MuiDataGrid-scrollbar--vertical': {
@@ -23,9 +23,7 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
       },
     }),
     row: {
-      '&:hover': {
-        backgroundColor: 'transparent',
-      },
+      '&:hover': { backgroundColor: 'transparent' },
     },
     cell: ({ theme }) => ({
       padding: 0,

@@ -7,21 +7,21 @@ const IconButton: Components<Omit<Theme, 'components'>>['MuiIconButton'] = {
       border: 1,
       borderStyle: 'solid',
       borderColor: theme.palette.info.main,
-      background: theme.palette.info.lighter,
+      backgroundColor: theme.palette.info.lighter,
       color: theme.palette.text.disabled,
       marginLeft: 0,
     }),
     sizeLarge: ({ theme }) => ({
-      fontSize: theme.typography.h4.fontSize,
       padding: theme.spacing(1.5),
+      fontSize: theme.typography.h4.fontSize,
     }),
     sizeMedium: ({ theme }) => ({
-      fontSize: theme.typography.h5.fontSize,
       padding: theme.spacing(1.175),
+      fontSize: theme.typography.h5.fontSize,
     }),
     sizeSmall: ({ theme }) => ({
-      fontSize: theme.typography.button.fontSize,
       padding: theme.spacing(0.875),
+      fontSize: theme.typography.button.fontSize,
     }),
   },
 };

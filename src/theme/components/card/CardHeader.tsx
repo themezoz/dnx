@@ -12,11 +12,9 @@ const CardHeader: Components<Omit<Theme, 'components'>>['MuiCardHeader'] = {
     }),
     action: ({ theme }) => ({
       '& .MuiIconButton-root': {
-        padding: theme.spacing(0.75),
         border: 'none',
-        '&:hover': {
-          background: theme.palette.info.lighter,
-        },
+        padding: theme.spacing(0.75),
+        '&:hover': { backgroundColor: theme.palette.info.lighter },
       },
     }),
   },

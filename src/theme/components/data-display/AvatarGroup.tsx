@@ -9,7 +9,7 @@ const AvatarGroup: Components<Omit<Theme, 'components'>>['MuiAvatarGroup'] = {
       height: 24,
       color: theme.palette.info.lighter,
       fontSize: theme.typography.body2.fontSize,
-      background: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.main,
     }),
   },
 };

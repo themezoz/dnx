@@ -3,14 +3,14 @@ import { Components } from '@mui/material/styles/components';
 
 const FormControlLabel: Components<Omit<Theme, 'components'>>['MuiFormControlLabel'] = {
   styleOverrides: {
-    root: ({ theme }) => ({
-      marginLeft: theme.spacing(0),
-    }),
+    root: {
+      marginLeft: 0,
+    },
     label: ({ theme }) => ({
       letterSpacing: 0.5,
-      marginLeft: theme.spacing(0.75),
       color: theme.palette.text.secondary,
       fontSize: theme.typography.body2.fontSize,
+      marginLeft: theme.spacing(0.75),
       userSelect: 'none',
     }),
   },

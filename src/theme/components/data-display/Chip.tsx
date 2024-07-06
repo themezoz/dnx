@@ -18,20 +18,20 @@ const Chip: Components<Omit<Theme, 'components'>>['MuiChip'] = {
       fontSize: theme.typography.body2.fontSize,
     }),
     colorPrimary: ({ theme }) => ({
-        color: theme.palette.primary.main,
-        background: theme.palette.primary.light,
+      color: theme.palette.primary.main,
+      backgroundColor: theme.palette.primary.light,
     }),
     colorSuccess: ({ theme }) => ({
-        color: theme.palette.success.main,
-        background: theme.palette.success.light,
+      color: theme.palette.success.main,
+      backgroundColor: theme.palette.success.light,
     }),
     colorWarning: ({ theme }) => ({
-        color: theme.palette.warning.dark,
-        background: theme.palette.warning.light,
+      color: theme.palette.warning.dark,
+      backgroundColor: theme.palette.warning.light,
     }),
     colorError: ({ theme }) => ({
-        color: theme.palette.error.dark,
-        background: theme.palette.error.light,
+      color: theme.palette.error.dark,
+      backgroundColor: theme.palette.error.light,
     }),
     iconSmall: {
       width: 12,
