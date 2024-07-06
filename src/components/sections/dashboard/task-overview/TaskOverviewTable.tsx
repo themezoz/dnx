@@ -5,6 +5,7 @@ import { LinearProgress } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
 import Chip from '@mui/material/Chip';
+import DataGridFooter from 'components/common/DataGridFooter';
 import {
   Avatar1,
   Avatar2,
@@ -219,6 +220,9 @@ const TaskOverviewTable = () => {
         includeHeaders: false,
         outliersFactor: 1,
         expand: true,
+      }}
+      slots={{
+        pagination: DataGridFooter,
       }}
       autoHeight
       checkboxSelection

@@ -66,6 +66,9 @@ const DataGrid: Components<Omit<Theme, 'components'>>['MuiDataGrid'] = {
     columnSeparator: {
       display: 'none',
     },
+    footerContainer: () => ({
+      border: 'none',
+    })
   },
 };
 

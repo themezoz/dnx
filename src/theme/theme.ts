@@ -36,6 +36,7 @@ import FormControlLabel from './components/input/FormControlLabel';
 import Checkbox from './components/input/Checkbox';
 import DataGrid from './components/data-grid/DataGrid';
 import Chip from './components/data-display/Chip';
+import PaginationItem from './components/pagination/PaginationItem';
 
 export const theme = createTheme({
   typography,
@@ -74,6 +75,7 @@ export const theme = createTheme({
     MuiAvatarGroup: AvatarGroup,
     MuiDivider: Divider,
     MuiDataGrid: DataGrid,
+    MuiPaginationItem: PaginationItem,
     MuiCssBaseline: CssBaseline,
   },
 });

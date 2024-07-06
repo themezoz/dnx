@@ -14,7 +14,7 @@ const TaskOverview = () => {
         </Stack>
       </Stack>
 
-      <Paper sx={{ mt: 1.5, p: 0, height: 'auto', width: 1 }}>
+      <Paper sx={{ mt: 1.5, p: 0, pb: 0.75, height: 'auto', width: 1 }}>
         <TaskOverviewTable />
       </Paper>
     </Stack>
