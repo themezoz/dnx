@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Avatar3 } from 'data/images';
 import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
@@ -9,7 +10,6 @@ import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import IconifyIcon from 'components/base/IconifyIcon';
-import { Avatar3 } from 'data/images';
 
 interface MenuItems {
   id: number;
@@ -109,12 +109,7 @@ const ProfileMenu = () => {
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem onClick={handleProfileMenuClose} sx={{ '&:hover': { bgcolor: 'info.light' } }}>
-          <Avatar
-            src={Avatar3}
-            sx={{
-              bgcolor: 'primary.main',
-            }}
-          />
+          <Avatar src={Avatar3} sx={{ bgcolor: 'primary.main' }} />
           <Stack direction="column">
             <Typography variant="body2" color="text.primary" fontWeight={600}>
               Alex Stanton
