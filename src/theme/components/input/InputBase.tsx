@@ -27,7 +27,11 @@ const InputBase: Components<Omit<Theme, 'components'>>['MuiInputBase'] = {
     }),
     sizeSmall: ({ theme }) => ({
       padding: theme.spacing(1, 1.25),
+      paddingLeft: `${theme.spacing(1.75)} !important`,
       fontSize: theme.typography.caption.fontSize,
+    }),
+    inputSizeSmall: ({ theme }) => ({
+      marginBottom: theme.spacing(0.2),
     }),
   },
 };

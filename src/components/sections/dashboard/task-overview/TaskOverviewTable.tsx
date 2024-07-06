@@ -1,6 +1,7 @@
+import { useEffect } from 'react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, useGridApiRef, GridApi } from '@mui/x-data-grid';
 import { LinearProgress } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import AvatarGroup from '@mui/material/AvatarGroup';
@@ -201,9 +202,20 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
   },
 ];
 
-const TaskOverviewTable = () => {
+interface TaskOverviewTableProps {
+  searchText: string;
+}
+
+const TaskOverviewTable = ({ searchText }: TaskOverviewTableProps) => {
+  const apiRef = useGridApiRef<GridApi>();
+
+  useEffect(() => {
+    apiRef.current.setQuickFilterValues(searchText.split(/\b\W+\b/).filter((word) => word !== ''));
+  }, [searchText]);
+
   return (
     <DataGrid
+      apiRef={apiRef}
       density="standard"
       columns={columns}
       rows={rows}
