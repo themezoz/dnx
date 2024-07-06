@@ -5,8 +5,8 @@ import TaskToday from 'components/sections/dashboard/task-today';
 import RunningTask from 'components/sections/dashboard/running-task';
 import UpcomingTask from 'components/sections/dashboard/upcoming-task';
 import WeekCalendar from 'components/sections/dashboard/week-calendar';
-import MonthlyMentors from 'components/sections/dashboard/monthly-mentors';
 import TaskOverview from 'components/sections/dashboard/task-overview';
+import MonthlyMentors from 'components/sections/dashboard/monthly-mentors';
 
 const Dashboard = () => {
   return (
