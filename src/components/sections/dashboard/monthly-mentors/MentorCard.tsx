@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -18,7 +19,14 @@ const MentorCard = ({ data }: MentorCardProps) => {
     <Card>
       <Stack alignItems="center" justifyContent="space-between">
         <Stack alignItems="center" spacing={1}>
-          <Box height={48} width={48} borderRadius="50%" overflow="hidden">
+          <Box
+            component={Link}
+            href="#!"
+            height={48}
+            width={48}
+            borderRadius="50%"
+            overflow="hidden"
+          >
             <CardMedia
               component="img"
               image={data.avatar}
@@ -30,7 +38,13 @@ const MentorCard = ({ data }: MentorCardProps) => {
           </Box>
 
           <CardContent>
-            <Typography variant="subtitle1" color="text.primary" fontWeight={600}>
+            <Typography
+              component={Link}
+              href="#!"
+              variant="subtitle1"
+              color="text.primary"
+              fontWeight={600}
+            >
               {data.name}
             </Typography>
             <Typography variant="subtitle2" color="text.secondary">
