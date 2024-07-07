@@ -65,8 +65,8 @@ const Activity = () => {
         </FormControl>
       </Stack>
 
-      <Box mt={2} height={130} bgcolor="info.lighter" borderRadius={3}>
-        <ActivityChart data={data} sx={{ height: '100% !important' }} />
+      <Box mt={2} bgcolor="info.lighter" borderRadius={3}>
+        <ActivityChart data={data} sx={{ height: '130px !important' }} />
       </Box>
     </Paper>
   );

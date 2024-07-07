@@ -33,9 +33,7 @@ const RunningTask = () => {
         </Typography>
       </Box>
       <Stack spacing={2} alignItems="center" width={1}>
-        <Box height={76} width={76}>
-          <RunningTaskChart data={chartData} sx={{ height: '100% !important' }} />
-        </Box>
+        <RunningTaskChart data={chartData} sx={{ width: 76, height: '76px !important' }} />
         <Box>
           <Typography variant="h5" fontWeight={600} color="info.lighter">
             100
