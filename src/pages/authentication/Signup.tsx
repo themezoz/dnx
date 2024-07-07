@@ -39,7 +39,7 @@ const Signup = () => {
           fullWidth
           startIcon={<IconifyIcon icon="uim:google" />}
         >
-          Signup with Google
+          Sign Up with Google
         </Button>
         <Button
           variant="contained"
@@ -48,7 +48,7 @@ const Signup = () => {
           startIcon={<IconifyIcon icon="uim:apple" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Signup with Apple
+          Sign Up with Apple
         </Button>
       </Stack>
       <Divider sx={{ my: 4 }}>or Signup with</Divider>
@@ -125,7 +125,7 @@ const Signup = () => {
           variant="body2"
           align="center"
         >
-          Already have an account? <Link href={paths.login}>Login</Link>
+          Already have an account? <Link href={paths.signin}>Signin</Link>
         </Typography>
       </Stack>
     </>

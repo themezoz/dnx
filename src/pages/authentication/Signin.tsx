@@ -16,7 +16,7 @@ interface User {
   [key: string]: string;
 }
 
-const Login = () => {
+const Signin = () => {
   const [user, setUser] = useState<User>({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
 
@@ -32,7 +32,7 @@ const Login = () => {
   return (
     <>
       <Typography align="center" variant="h4">
-        Login
+        SignIn
       </Typography>
       <Stack direction="column" mt={4} spacing={2} width={1}>
         <Button
@@ -41,7 +41,7 @@ const Login = () => {
           fullWidth
           startIcon={<IconifyIcon icon="uim:google" />}
         >
-          Login with Google
+          Sign In with Google
         </Button>
         <Button
           variant="contained"
@@ -50,10 +50,10 @@ const Login = () => {
           startIcon={<IconifyIcon icon="uim:apple" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Login with Apple
+          Sign In with Apple
         </Button>
       </Stack>
-      <Divider sx={{ my: 4 }}>or Login with</Divider>
+      <Divider sx={{ my: 4 }}>or Signin with</Divider>
       <Stack onSubmit={handleSubmit} component="form" direction="column" gap={2}>
         <TextField
           id="email"
@@ -131,4 +131,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signin;

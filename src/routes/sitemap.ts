@@ -4,6 +4,7 @@ export interface SubMenuItem {
   name: string;
   pathName: string;
   path: string;
+  icon?: string;
   active?: boolean;
   items?: SubMenuItem[];
 }
@@ -57,13 +58,15 @@ const sitemap: MenuItem[] = [
     active: true,
     items: [
       {
-        name: 'Login',
-        pathName: 'login',
-        path: paths.login,
+        name: 'Sign In',
+        pathName: 'signin',
+        icon: '',
+        path: paths.signin,
       },
       {
-        name: 'Signup',
+        name: 'Sign Up',
         pathName: 'signup',
+        icon: '',
         path: paths.signup,
       },
     ],

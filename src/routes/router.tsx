@@ -9,7 +9,7 @@ import PageLoader from 'components/loader/PageLoader';
 
 const App = lazy(() => import('App'));
 const Dashboard = lazy(() => import('pages/dashboard'));
-const Login = lazy(() => import('pages/authentication/Login'));
+const Signin = lazy(() => import('pages/authentication/Signin'));
 const Signup = lazy(() => import('pages/authentication/Signup'));
 
 const router = createBrowserRouter(
@@ -46,8 +46,8 @@ const router = createBrowserRouter(
           ),
           children: [
             {
-              path: paths.login,
-              element: <Login />,
+              path: paths.signin,
+              element: <Signin />,
             },
             {
               path: paths.signup,
