@@ -6,12 +6,12 @@ const InputAdornment: Components<Omit<Theme, 'components'>>['MuiInputAdornment']
     root: ({ theme }) => ({
       margin: '0 !important',
       paddingRight: theme.spacing(0.75),
-      color: theme.palette.neutral.lighter,
+      color: theme.palette.neutral.light,
       fontSize: theme.typography.h4.fontSize,
 
       '&.MuiInputAdornment-sizeSmall': {
         '& .MuiBox-root': {
-          fontSize: theme.typography.body1.fontSize,
+          fontSize: theme.typography.h6.fontSize,
         },
       },
     }),
