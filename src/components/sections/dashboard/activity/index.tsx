@@ -42,7 +42,18 @@ const Activity = () => {
           Activity
         </Typography>
 
-        <FormControl variant="filled" sx={{ width: 100 }}>
+        <FormControl
+          variant="filled"
+          sx={{
+            width: 100,
+            '& .MuiInputBase-root': {
+              '&:focus-within': {
+                borderColor: 'transparent !important',
+                boxShadow: 'none',
+              },
+            },
+          }}
+        >
           <Select
             id="select-filled"
             value={week}
