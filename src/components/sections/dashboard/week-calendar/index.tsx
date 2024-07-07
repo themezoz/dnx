@@ -22,12 +22,12 @@ const WeekCalendar = () => {
   );
 
   const handlePrevMonth = () => {
-    const newDate = dayjs(selectedDate).subtract(1, 'month').startOf('month');
+    const newDate = dayjs(selectedDate).subtract(1, 'month');
     setSelectedDate(newDate.toDate());
   };
 
   const handleNextMonth = () => {
-    const newDate = dayjs(selectedDate).add(1, 'month').startOf('month');
+    const newDate = dayjs(selectedDate).add(1, 'month');
     setSelectedDate(newDate.toDate());
   };
 
