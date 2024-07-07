@@ -14,10 +14,11 @@ const InputBase: Components<Omit<Theme, 'components'>>['MuiInputBase'] = {
       padding: theme.spacing(1.25, 2.5),
       letterSpacing: 0.5,
 
-      '& input::placeholder': {
-        color: theme.palette.text.secondary,
-        opacity: 1,
+      '&:focus-within': {
+        borderColor: theme.palette.primary.main,
+        boxShadow: theme.customShadows[1],
       },
+
       '&:before, &:after': {
         display: 'none',
       },
@@ -29,6 +30,12 @@ const InputBase: Components<Omit<Theme, 'components'>>['MuiInputBase'] = {
       padding: theme.spacing(1, 1.25),
       paddingLeft: `${theme.spacing(1.75)} !important`,
       fontSize: theme.typography.caption.fontSize,
+    }),
+    input: ({ theme }) => ({
+      '&::placeholder': {
+        color: theme.palette.text.secondary,
+        opacity: 1,
+      },
     }),
     inputSizeSmall: ({ theme }) => ({
       marginBottom: theme.spacing(0.2),
