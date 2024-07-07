@@ -7,6 +7,7 @@ import UpcomingTask from 'components/sections/dashboard/upcoming-task';
 import WeekCalendar from 'components/sections/dashboard/week-calendar';
 import TaskOverview from 'components/sections/dashboard/task-overview';
 import MonthlyMentors from 'components/sections/dashboard/monthly-mentors';
+import Footer from 'components/common/Footer';
 
 const Dashboard = () => {
   return (
@@ -25,6 +26,10 @@ const Dashboard = () => {
         <MonthlyMentors />
         <UpcomingTask />
         <TaskOverview />
+
+        <Box display={{ xs: 'none', md: 'block' }}>
+          <Footer />
+        </Box>
       </Stack>
 
       <Box
@@ -46,6 +51,10 @@ const Dashboard = () => {
           <WeekCalendar />
           <TaskToday />
         </Stack>
+
+        <Box display={{ xs: 'block', md: 'none' }}>
+          <Footer />
+        </Box>
       </Box>
     </Stack>
   );
