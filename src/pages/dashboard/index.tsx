@@ -17,7 +17,6 @@ const Dashboard = () => {
           width={1}
           spacing={3.5}
           direction={{ xs: 'column', sm: 'row', md: 'column', xl: 'row' }}
-          alignItems="center"
         >
           <RunningTask />
           <Activity />

@@ -36,13 +36,7 @@ const Activity = () => {
   };
 
   return (
-    <Paper
-      sx={{
-        height: 220,
-        width: { xs: 1, sm: 'calc(100% - 200px)', md: 1, xl: 'calc(100% - 200px)' },
-        bgcolor: 'info.main',
-      }}
-    >
+    <Paper sx={{ flex: 1, bgcolor: 'info.main' }}>
       <Stack alignItems="center" justifyContent="space-between" mt={-0.5}>
         <Typography variant="body1" color="text.primary" fontWeight={700}>
           Activity
