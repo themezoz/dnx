@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Menu from '@mui/material/Menu';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -68,24 +67,20 @@ const LanguageSelect = () => {
 
   return (
     <>
-      <Tooltip title={`${language.lang} - ${language.code}`}>
-        <IconButton onClick={handleFlagButtonClick} size="large">
-          <IconifyIcon icon={language.flag} />
-        </IconButton>
-      </Tooltip>
+      <IconButton onClick={handleFlagButtonClick} size="large">
+        <IconifyIcon icon={language.flag} />
+      </IconButton>
+      
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
         open={open}
         onClose={handleFlagMenuClose}
         onClick={handleFlagMenuClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            mt: 1.5,
-            p: '0 !important',
-            width: 240,
-            overflow: 'hidden',
+        sx={{
+          mt: 1.5,
+          '& .MuiList-root': {
+            width: 230,
           },
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}

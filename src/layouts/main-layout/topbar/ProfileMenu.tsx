@@ -4,7 +4,7 @@ import Menu from '@mui/material/Menu';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
-import Tooltip from '@mui/material/Tooltip';
+// import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
@@ -64,25 +64,22 @@ const ProfileMenu = () => {
 
   return (
     <>
-      <Tooltip title="Profile">
-        <ButtonBase onClick={handleProfileClick} disableRipple>
-          <Stack
-            alignItems="center"
-            aria-controls={open ? 'account-menu' : undefined}
-            aria-expanded={open ? 'true' : undefined}
-            aria-haspopup="true"
-          >
-            <Avatar
-              src={Avatar3}
-              sx={{
-                height: 48,
-                width: 48,
-                bgcolor: 'primary.main',
-              }}
-            />
-          </Stack>
-        </ButtonBase>
-      </Tooltip>
+      <ButtonBase
+        onClick={handleProfileClick}
+        aria-controls={open ? 'account-menu' : undefined}
+        aria-expanded={open ? 'true' : undefined}
+        aria-haspopup="true"
+        disableRipple
+      >
+        <Avatar
+          src={Avatar3}
+          sx={{
+            height: 48,
+            width: 48,
+            bgcolor: 'primary.main',
+          }}
+        />
+      </ButtonBase>
 
       <Menu
         anchorEl={anchorEl}
@@ -90,26 +87,17 @@ const ProfileMenu = () => {
         open={open}
         onClose={handleProfileMenuClose}
         onClick={handleProfileMenuClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            mt: 1.5,
-            p: '0 !important',
-            width: 240,
-            overflow: 'hidden',
-            '& .MuiAvatar-root': {
-              width: 40,
-              height: 40,
-              ml: -0.5,
-              mr: 1,
-            },
+        sx={{
+          mt: 1.5,
+          '& .MuiList-root': {
+            width: 230,
           },
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
         <MenuItem onClick={handleProfileMenuClose} sx={{ '&:hover': { bgcolor: 'info.light' } }}>
-          <Avatar src={Avatar3} sx={{ bgcolor: 'primary.main' }} />
+          <Avatar src={Avatar3} sx={{ mr: 1, height: 42, width: 42 }} />
           <Stack direction="column">
             <Typography variant="body2" color="text.primary" fontWeight={600}>
               Alex Stanton

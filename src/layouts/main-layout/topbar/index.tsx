@@ -1,7 +1,6 @@
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Badge from '@mui/material/Badge';
-import Tooltip from '@mui/material/Tooltip';
 import Toolbar from '@mui/material/Toolbar';
 import TextField from '@mui/material/TextField';
 import ButtonBase from '@mui/material/ButtonBase';
@@ -81,13 +80,11 @@ const Topbar = ({ isClosing, mobileOpen, setMobileOpen }: TopbarProps) => {
 
       <Stack spacing={{ xs: 1, sm: 2 }} alignItems="center">
         <LanguageSelect />
-        <Tooltip title="Notifications">
-          <IconButton size="large">
-            <Badge color="error" variant="dot">
-              <IconifyIcon icon="solar:bell-outline" />
-            </Badge>
-          </IconButton>
-        </Tooltip>
+        <IconButton size="large">
+          <Badge color="error" variant="dot">
+            <IconifyIcon icon="solar:bell-outline" />
+          </Badge>
+        </IconButton>
         <ProfileMenu />
       </Stack>
     </Stack>

@@ -26,6 +26,7 @@ import CardMedia from './components/cards/CardMedia';
 import CardHeader from './components/cards/CardHeader';
 import CardContent from './components/cards/CardContent';
 import CardActions from './components/cards/CardActions';
+import Avatar from './components/data-display/Avatar';
 import Slider from './components/inputs/Slider';
 import Chip from './components/data-display/Chip';
 import Checkbox from './components/inputs/Checkbox';
@@ -51,11 +52,11 @@ export const theme = createTheme({
     MuiButtonBase: ButtonBase,
     MuiIconButton: IconButton,
     MuiToolbar: Toolbar,
-    MuiCollapse: Collapse,
     MuiList: List,
-    MuiListItemButton: ListItemButton,
-    MuiListItemText: ListItemText,
+    MuiCollapse: Collapse,
     MuiListItemIcon: ListItemIcon,
+    MuiListItemText: ListItemText,
+    MuiListItemButton: ListItemButton,
     MuiMenuItem: MenuItem,
     MuiInputBase: InputBase,
     MuiFilledInput: FilledInput,
@@ -68,6 +69,7 @@ export const theme = createTheme({
     MuiBadge: Badge,
     MuiChip: Chip,
     MuiCard: Card,
+    MuiAvatar: Avatar,
     MuiCardMedia: CardMedia,
     MuiCardHeader: CardHeader,
     MuiCardContent: CardContent,
