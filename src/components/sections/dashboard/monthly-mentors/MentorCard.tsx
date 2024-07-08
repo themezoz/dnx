@@ -1,9 +1,8 @@
-import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import CardMedia from '@mui/material/CardMedia';
+import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -16,27 +15,19 @@ interface MentorCardProps {
 
 const MentorCard = ({ data }: MentorCardProps) => {
   return (
-    <Card>
+    <Card sx={{ userSelect: 'none' }}>
       <Stack alignItems="center" justifyContent="space-between">
         <Stack alignItems="center" spacing={1}>
-          <Box
+          <Avatar
+            src={data.avatar}
             component={Link}
             href="#!"
-            height={48}
-            width={48}
-            borderRadius="50%"
-            overflow="hidden"
-          >
-            <CardMedia
-              component="img"
-              image={data.avatar}
-              alt="task_today_image"
-              height={48}
-              width={48}
-              sx={{ objectFit: 'cover' }}
-            />
-          </Box>
-
+            sx={{
+              height: 48,
+              width: 48,
+              bgcolor: 'primary.main',
+            }}
+          />
           <CardContent>
             <Typography
               component={Link}

@@ -46,6 +46,7 @@ const SliderWrapper = <T extends HasId>({ title, SliderCard, data }: SliderWrapp
             onClick={handlePrev}
             size="large"
             sx={{ p: 1, border: 'none', bgcolor: 'transparent !important' }}
+            disabled={isSlideBegin ? true : false}
           >
             <IconifyIcon
               icon="oui:arrow-left"
@@ -56,6 +57,7 @@ const SliderWrapper = <T extends HasId>({ title, SliderCard, data }: SliderWrapp
             onClick={handleNext}
             size="large"
             sx={{ p: 1, border: 'none', bgcolor: 'transparent !important' }}
+            disabled={isSlideEnd ? true : false}
           >
             <IconifyIcon
               icon="oui:arrow-right"

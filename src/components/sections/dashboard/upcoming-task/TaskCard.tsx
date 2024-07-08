@@ -16,7 +16,7 @@ interface TaskCardProps {
 
 const TaskCard = ({ data }: TaskCardProps) => {
   return (
-    <Card>
+    <Card sx={{ userSelect: 'none' }}>
       <CardMedia component="img" height="110" image={data.thumb} alt="task_today_image" />
       <CardContent>
         <Box mt={1.5}>
