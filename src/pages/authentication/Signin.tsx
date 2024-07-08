@@ -78,7 +78,6 @@ const Signin = () => {
           placeholder="Your Password"
           autoComplete="current-password"
           fullWidth
-          autoFocus
           required
           InputProps={{
             endAdornment: (

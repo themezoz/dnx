@@ -76,7 +76,6 @@ const Signup = () => {
           placeholder="Your Email"
           autoComplete="email"
           fullWidth
-          autoFocus
           required
         />
         <TextField
@@ -89,7 +88,6 @@ const Signup = () => {
           placeholder="Your Password"
           autoComplete="current-password"
           fullWidth
-          autoFocus
           required
           InputProps={{
             endAdornment: (
