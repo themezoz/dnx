@@ -57,7 +57,6 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
             value={params.value}
             sx={{
               width: 1,
-              maxWidth: 240,
               height: 5,
               borderRadius: 4,
             }}

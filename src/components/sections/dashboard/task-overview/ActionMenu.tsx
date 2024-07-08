@@ -63,13 +63,10 @@ const ActionMenu = () => {
         open={open}
         onClose={handleActionMenuClose}
         onClick={handleActionMenuClose}
-        PaperProps={{
-          elevation: 0,
-          sx: {
-            mt: 1.5,
-            p: '0 !important',
+        sx={{
+          mt: 0.5,
+          '& .MuiList-root': {
             width: 140,
-            overflow: 'hidden',
           },
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
