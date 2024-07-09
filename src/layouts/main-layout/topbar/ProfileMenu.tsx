@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Avatar3 } from 'data/images';
 import Menu from '@mui/material/Menu';
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
 import Divider from '@mui/material/Divider';
@@ -89,38 +90,43 @@ const ProfileMenu = () => {
         sx={{
           mt: 1.5,
           '& .MuiList-root': {
+            p: 0,
             width: 230,
           },
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem onClick={handleProfileMenuClose} sx={{ '&:hover': { bgcolor: 'info.light' } }}>
-          <Avatar src={Avatar3} sx={{ mr: 1, height: 42, width: 42 }} />
-          <Stack direction="column">
-            <Typography variant="body2" color="text.primary" fontWeight={600}>
-              Alex Stanton
-            </Typography>
-            <Typography variant="caption" color="text.secondary" fontWeight={400}>
-              alex@example.com
-            </Typography>
-          </Stack>
-        </MenuItem>
-
-        <Divider />
-
-        {menuItems.map((item) => {
-          return (
-            <MenuItem key={item.id} onClick={handleProfileMenuClose} sx={{ py: 1 }}>
-              <ListItemIcon sx={{ mr: 1, color: 'text.secondary', fontSize: 'h5.fontSize' }}>
-                <IconifyIcon icon={item.icon} />
-              </ListItemIcon>
-              <Typography variant="body2" color="text.secondary" fontWeight={500}>
-                {item.title}
+        <Box p={1}>
+          <MenuItem onClick={handleProfileMenuClose} sx={{ '&:hover': { bgcolor: 'info.light' } }}>
+            <Avatar src={Avatar3} sx={{ mr: 1, height: 42, width: 42 }} />
+            <Stack direction="column">
+              <Typography variant="body2" color="text.primary" fontWeight={600}>
+                Alex Stanton
               </Typography>
-            </MenuItem>
-          );
-        })}
+              <Typography variant="caption" color="text.secondary" fontWeight={400}>
+                alex@example.com
+              </Typography>
+            </Stack>
+          </MenuItem>
+        </Box>
+
+        <Divider sx={{ my: 0 }} />
+
+        <Box p={1}>
+          {menuItems.map((item) => {
+            return (
+              <MenuItem key={item.id} onClick={handleProfileMenuClose} sx={{ py: 1 }}>
+                <ListItemIcon sx={{ mr: 1, color: 'text.secondary', fontSize: 'h5.fontSize' }}>
+                  <IconifyIcon icon={item.icon} />
+                </ListItemIcon>
+                <Typography variant="body2" color="text.secondary" fontWeight={500}>
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+        </Box>
       </Menu>
     </>
   );
