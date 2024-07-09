@@ -34,12 +34,13 @@ const Signin = () => {
       <Typography align="center" variant="h4">
         SignIn
       </Typography>
-      <Stack direction="column" mt={4} spacing={2} width={1}>
+      <Stack direction="column" mt={3} spacing={2} width={1}>
         <Button
           variant="contained"
-          color="primary"
+          color="secondary"
           fullWidth
-          startIcon={<IconifyIcon icon="uim:google" />}
+          startIcon={<IconifyIcon icon="logos:google-icon" />}
+          sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
           Sign In with Google
         </Button>
@@ -47,7 +48,7 @@ const Signin = () => {
           variant="contained"
           color="secondary"
           fullWidth
-          startIcon={<IconifyIcon icon="uim:apple" />}
+          startIcon={<IconifyIcon icon="logos:apple" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
           Sign In with Apple

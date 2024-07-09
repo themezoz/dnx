@@ -32,23 +32,24 @@ const Signup = () => {
       <Typography align="center" variant="h4">
         SignUp
       </Typography>
-      <Stack direction="column" mt={4} spacing={2} width={1}>
+      <Stack direction="column" mt={3} spacing={2} width={1}>
         <Button
           variant="contained"
-          color="primary"
+          color="secondary"
           fullWidth
-          startIcon={<IconifyIcon icon="uim:google" />}
+          startIcon={<IconifyIcon icon="logos:google-icon" />}
+          sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign Up with Google
+          Sign In with Google
         </Button>
         <Button
           variant="contained"
           color="secondary"
           fullWidth
-          startIcon={<IconifyIcon icon="uim:apple" />}
+          startIcon={<IconifyIcon icon="logos:apple" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign Up with Apple
+          Sign In with Apple
         </Button>
       </Stack>
       <Divider sx={{ my: 4 }}>or Signup with</Divider>
