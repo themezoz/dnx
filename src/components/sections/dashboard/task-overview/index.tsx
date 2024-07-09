@@ -37,7 +37,7 @@ const TaskOverview = () => {
         />
       </Stack>
 
-      <Paper sx={{ mt: 1.5, p: 0, pb: 0.75, height: 411, width: 1 }}>
+      <Paper sx={{ mt: 1.5, p: 0, pb: 0.75, minHeight: 411, width: 1 }}>
         <TaskOverviewTable searchText={searchText} />
       </Paper>
     </Stack>

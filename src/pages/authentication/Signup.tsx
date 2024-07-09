@@ -30,9 +30,13 @@ const Signup = () => {
   return (
     <>
       <Typography align="center" variant="h4">
-        SignUp
+        Sign Up
       </Typography>
-      <Stack direction="column" mt={3} spacing={2} width={1}>
+      <Typography mt={1.5} align="center" variant="body2">
+        Let's Join us, create account with,
+      </Typography>
+
+      <Stack mt={3} spacing={2} width={1}>
         <Button
           variant="contained"
           color="secondary"
@@ -40,7 +44,7 @@ const Signup = () => {
           startIcon={<IconifyIcon icon="logos:google-icon" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign Up with Google
+          Google
         </Button>
         <Button
           variant="contained"
@@ -49,11 +53,13 @@ const Signup = () => {
           startIcon={<IconifyIcon icon="logos:apple" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign Up with Apple
+          Apple
         </Button>
       </Stack>
+
       <Divider sx={{ my: 4 }}>or Signup with</Divider>
-      <Stack onSubmit={handleSubmit} component="form" direction="column" gap={2}>
+
+      <Stack mt={3} onSubmit={handleSubmit} component="form" direction="column" gap={2}>
         <TextField
           id="name"
           name="name"
@@ -66,6 +72,13 @@ const Signup = () => {
           fullWidth
           autoFocus
           required
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <IconifyIcon icon="hugeicons:user-circle-02" />
+              </InputAdornment>
+            ),
+          }}
         />
         <TextField
           id="email"
@@ -78,6 +91,13 @@ const Signup = () => {
           autoComplete="email"
           fullWidth
           required
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <IconifyIcon icon="hugeicons:mail-at-sign-02" />
+              </InputAdornment>
+            ),
+          }}
         />
         <TextField
           id="password"
@@ -91,6 +111,11 @@ const Signup = () => {
           fullWidth
           required
           InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <IconifyIcon icon="hugeicons:lock-key" />
+              </InputAdornment>
+            ),
             endAdornment: (
               <InputAdornment
                 position="end"
@@ -114,9 +139,11 @@ const Signup = () => {
             ),
           }}
         />
+
         <Button type="submit" variant="contained" size="medium" fullWidth sx={{ mt: 1.5 }}>
-          Submit
+          Sign Up
         </Button>
+
         <Typography
           mt={3}
           letterSpacing={0.25}
