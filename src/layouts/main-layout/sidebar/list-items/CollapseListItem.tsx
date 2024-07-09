@@ -54,7 +54,7 @@ const CollapseListItem = ({ subheader, active, items, icon }: MenuItem) => {
                 key={route.pathName}
                 component={Link}
                 href={route.path}
-                sx={{ bgcolor: route.active ? 'info.main' : null }}
+                sx={{ ml: 1.5, bgcolor: route.active ? 'info.main' : null }}
               >
                 <ListItemText
                   primary={route.name}
