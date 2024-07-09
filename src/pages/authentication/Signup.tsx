@@ -40,7 +40,7 @@ const Signup = () => {
           startIcon={<IconifyIcon icon="logos:google-icon" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign In with Google
+          Sign Up with Google
         </Button>
         <Button
           variant="contained"
@@ -49,7 +49,7 @@ const Signup = () => {
           startIcon={<IconifyIcon icon="logos:apple" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign In with Apple
+          Sign Up with Apple
         </Button>
       </Stack>
       <Divider sx={{ my: 4 }}>or Signup with</Divider>
