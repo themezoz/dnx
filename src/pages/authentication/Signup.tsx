@@ -33,10 +33,10 @@ const Signup = () => {
         Sign Up
       </Typography>
       <Typography mt={1.5} align="center" variant="body2">
-        Let's Join us, create account with,
+        Let's Join us! create account with,
       </Typography>
 
-      <Stack mt={3} spacing={2} width={1}>
+      <Stack mt={3} spacing={1.75} width={1}>
         <Button
           variant="contained"
           color="secondary"
@@ -50,7 +50,7 @@ const Signup = () => {
           variant="contained"
           color="secondary"
           fullWidth
-          startIcon={<IconifyIcon icon="logos:apple" />}
+          startIcon={<IconifyIcon icon="logos:apple" sx={{ mb: 0.5 }} />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
           Apple
@@ -59,7 +59,7 @@ const Signup = () => {
 
       <Divider sx={{ my: 4 }}>or Signup with</Divider>
 
-      <Stack mt={3} onSubmit={handleSubmit} component="form" direction="column" gap={2}>
+      <Stack component="form" mt={3} onSubmit={handleSubmit} direction="column" gap={2}>
         <TextField
           id="name"
           name="name"
@@ -143,17 +143,11 @@ const Signup = () => {
         <Button type="submit" variant="contained" size="medium" fullWidth sx={{ mt: 1.5 }}>
           Sign Up
         </Button>
-
-        <Typography
-          mt={3}
-          letterSpacing={0.25}
-          color="text.secondary"
-          variant="body2"
-          align="center"
-        >
-          Already have an account? <Link href={paths.signin}>Signin</Link>
-        </Typography>
       </Stack>
+
+      <Typography mt={5} variant="body2" color="text.secondary" align="center" letterSpacing={0.25}>
+        Already have an account? <Link href={paths.signin}>Signin</Link>
+      </Typography>
     </>
   );
 };

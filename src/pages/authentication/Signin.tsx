@@ -32,9 +32,13 @@ const Signin = () => {
   return (
     <>
       <Typography align="center" variant="h4">
-        SignIn
+        Sign In
       </Typography>
-      <Stack direction="column" mt={3} spacing={2} width={1}>
+      <Typography mt={1.5} align="center" variant="body2">
+        Welcome back! Let's continue with,
+      </Typography>
+
+      <Stack mt={3} spacing={1.75} width={1}>
         <Button
           variant="contained"
           color="secondary"
@@ -42,20 +46,22 @@ const Signin = () => {
           startIcon={<IconifyIcon icon="logos:google-icon" />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign In with Google
+          Google
         </Button>
         <Button
           variant="contained"
           color="secondary"
           fullWidth
-          startIcon={<IconifyIcon icon="logos:apple" />}
+          startIcon={<IconifyIcon icon="logos:apple" sx={{ mb: 0.5 }} />}
           sx={{ bgcolor: 'info.main', '&:hover': { bgcolor: 'info.main' } }}
         >
-          Sign In with Apple
+          Apple
         </Button>
       </Stack>
+
       <Divider sx={{ my: 4 }}>or Signin with</Divider>
-      <Stack onSubmit={handleSubmit} component="form" direction="column" gap={2}>
+
+      <Stack component="form" mt={3} onSubmit={handleSubmit} direction="column" gap={2}>
         <TextField
           id="email"
           name="email"
@@ -68,6 +74,13 @@ const Signin = () => {
           fullWidth
           autoFocus
           required
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <IconifyIcon icon="hugeicons:mail-at-sign-02" />
+              </InputAdornment>
+            ),
+          }}
         />
         <TextField
           id="password"
@@ -81,6 +94,11 @@ const Signin = () => {
           fullWidth
           required
           InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <IconifyIcon icon="hugeicons:lock-key" />
+              </InputAdornment>
+            ),
             endAdornment: (
               <InputAdornment
                 position="end"
@@ -104,7 +122,8 @@ const Signin = () => {
             ),
           }}
         />
-        <Stack mt={-1} alignItems="center" justifyContent="space-between">
+
+        <Stack mt={-2} alignItems="center" justifyContent="space-between">
           <FormControlLabel
             control={<Checkbox id="checkbox" name="checkbox" size="small" color="primary" />}
             label="Remember me"
@@ -114,19 +133,15 @@ const Signin = () => {
             Forgot password?
           </Link>
         </Stack>
-        <Button type="submit" variant="contained" size="medium" fullWidth sx={{ mt: 1.5 }}>
-          Submit
+
+        <Button type="submit" variant="contained" size="medium" fullWidth>
+          Sign In
         </Button>
-        <Typography
-          mt={3}
-          letterSpacing={0.25}
-          color="text.secondary"
-          variant="body2"
-          align="center"
-        >
-          Don't have an account? <Link href={paths.signup}>Signup</Link>
-        </Typography>
       </Stack>
+
+      <Typography mt={5} variant="body2" color="text.secondary" align="center" letterSpacing={0.25}>
+        Don't have an account? <Link href={paths.signup}>Signup</Link>
+      </Typography>
     </>
   );
 };
