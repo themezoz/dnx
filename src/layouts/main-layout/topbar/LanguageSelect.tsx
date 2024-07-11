@@ -23,27 +23,27 @@ const languages: Language[] = [
   },
   {
     id: 2,
-    code: 'en-US',
-    lang: 'English (US)',
-    flag: 'twemoji:flag-united-states',
-  },
-  {
-    id: 3,
     code: 'ban',
     lang: 'বাংলা',
     flag: 'twemoji:flag-bangladesh',
   },
   {
-    id: 4,
+    id: 3,
     code: 'zh',
     lang: '中文',
     flag: 'twemoji:flag-china',
   },
   {
-    id: 5,
+    id: 4,
     code: 'tr',
     lang: 'Türkçe',
     flag: 'twemoji:flag-turkey',
+  },
+  {
+    id: 5,
+    code: 'nld',
+    lang: 'Dutch',
+    flag: 'twemoji:flag-netherlands',
   },
 ];
 
@@ -70,7 +70,7 @@ const LanguageSelect = () => {
       <IconButton onClick={handleFlagButtonClick} size="large">
         <IconifyIcon icon={language.flag} />
       </IconButton>
-      
+
       <Menu
         anchorEl={anchorEl}
         id="account-menu"
